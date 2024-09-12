@@ -156,18 +156,33 @@
 
 .productItemSellingFunctions {
   width: 170px;
-  /* border: 1px solid green; */
+  height: 101%;
+  /* background-color: aqua; */
   text-align: center;
 }
 
-.productItemSaveToBookmarkButton {
+.removeToBookmarkButton,
+.saveToBookmarkButton {
+  display: inline-block;
   margin-left: 122px;
-  color: rgb(255, 88, 88);
+  color: rgb(255, 183, 183);
 }
 
-.productItemSaveToBookmarkButton:hover {
+.removeToBookmarkButton {
   color: rgb(255, 0, 0);
 }
+
+.removeToBookmarkButton:hover {
+  color: rgb(255, 183, 183);
+  cursor: pointer;
+}
+
+.saveToBookmarkButton:hover {
+  color: rgb(255, 0, 0);
+  cursor: pointer;
+}
+
+
 
 .productItemPriceDiv {
   margin-top: -11px;
@@ -228,50 +243,47 @@
   border: 1px solid rgb(185, 185, 185);
 }
 
-.productItemSaveOnCartButton,
-.productItemOrderNowButton {
-  box-sizing: border-box;
-  display: inline-block;
-  color: white;
+
+/* ====[cart , pruchase]===================== */
+.cartPurchaseButton {
+  /* background-color: red; */
   width: 120px;
-  height: 30px;
+  height: 70px;
   line-height: 30px;
-  font-size: 19px;
-  font-weight: bold;
+  margin: auto;
   margin-top: 10px;
-  border-radius: 3px;
+  border: none;
+  border-radius: 5px;
 }
 
-.productItemSaveOnCartButton a,
-.productItemOrderNowButton a {
+.cartPurchaseButton>button {
   display: inline-block;
   width: 100%;
-  height: 100%;
+  height: 30px;
   color: white;
   padding: 0;
+  border: none;
+  font-size: 19px;
+  font-weight: bold;
+  border-radius: 5px;
 }
 
-.productItemSaveOnCartButton {
+.cartPurchaseButton>button:nth-child(1) {
   background-color: rgb(115, 179, 97);
-  border: 1px solid rgb(115, 179, 97);
-
 }
 
-.productItemOrderNowButton {
+.cartPurchaseButton>button:nth-child(2) {
+  margin-top: 10px;
   background-color: rgb(255, 88, 88);
-  border: 1px solid rgb(255, 88, 88);
 }
 
-.productItemSaveOnCartButton:hover {
+.cartPurchaseButton>button:nth-child(1):hover {
   background-color: rgb(35, 109, 15);
-  border: 1px solid rgb(35, 109, 15);
   cursor: pointer;
-
 }
 
-.productItemOrderNowButton:hover {
+.cartPurchaseButton>button:nth-child(2):hover {
   background-color: rgb(183, 7, 7);
-  border: 1px solid rgb(183, 7, 7);
   cursor: pointer;
 }
 

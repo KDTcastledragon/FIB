@@ -30,6 +30,7 @@ const ProductListPage = () => {
   const [productData, setProductData] = useState([]);
   const [bookmarkData, setBookmarkData] = useState([]);
 
+
   //==========================================================================================================================
   useEffect(() => {
     axios
@@ -40,7 +41,7 @@ const ProductListPage = () => {
         const data = { id: loginID }
 
         axios
-          .get(`/bookmark/bookmarklistParam?id=${loginID}`)
+          .post(`/bookmark/bookmarkList`, data)
           .then((response) => {
             setBookmarkData(response.data);
 
@@ -51,9 +52,7 @@ const ProductListPage = () => {
         console.log(`초기 책 목록 실패 : ${e.messege}`);
       })
 
-
   }, []);
-
 
   //==========================================================================================================================
   const showWarning = () => {
@@ -229,34 +228,44 @@ const ProductListPage = () => {
 
         <div className='productListItemMapedArea'>
 
-          {viewedList.length === 0 ?
-            <div className='productListNoContentBox'><span>해당하는 상품이 없습니다.</span></div>
-            : viewedList.map((d, i) => (
-              <ProductListItem
-                key={i}
-                product_code={d.product_code}
-                domestic={d.domestic}
-                protype={d.protype}
-                writer={d.writer}
-                title={d.title}
-                translator={d.translator}
-                publisher={d.publisher}
-                publish_date={d.publish_date}
-                category={d.category}
-                genre={d.genre}
-                summary={d.summary}
-                image={d.image}
-                intro_image={d.intro_image}
-                content={d.content}
-                price={d.price}
-                stack={d.stack}
-                sellcount={d.sellcount}
-                gradeavg={d.gradeavg}
-                viewcount={d.viewcount}
-                regdate={d.regdate}
+          {viewedList.length === 0 ? (
+            <div className='productListNoContentBox'>
+              <span>해당하는 상품이 없습니다.</span>
+            </div>
+          ) : (
+            viewedList.map((d, i) => {
+              const isMarked = bookmarkData.some(
+                (bookmark) => bookmark.product_code === d.product_code
+              );
 
-              />
-            ))}
+              return (
+                <ProductListItem
+                  key={i}
+                  product_code={d.product_code}
+                  domestic={d.domestic}
+                  protype={d.protype}
+                  writer={d.writer}
+                  title={d.title}
+                  translator={d.translator}
+                  publisher={d.publisher}
+                  publish_date={d.publish_date}
+                  category={d.category}
+                  genre={d.genre}
+                  summary={d.summary}
+                  image={d.image}
+                  intro_image={d.intro_image}
+                  content={d.content}
+                  price={d.price}
+                  stack={d.stack}
+                  sellcount={d.sellcount}
+                  gradeavg={d.gradeavg}
+                  viewcount={d.viewcount}
+                  regdate={d.regdate}
+                  isMarked={isMarked}
+                />
+              );
+            })
+          )}
         </div>
 
         <div className='productListPage_pageNationButton'>

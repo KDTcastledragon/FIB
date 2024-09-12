@@ -23,13 +23,19 @@ public class BookmarkServiceImpl implements BookmarkService {
 	}
 
 	@Override
-	public int checkDuplicated(String loginID, int product_code) {
+	public boolean isDuplicated(String loginID, int product_code) {
 		Optional<Bookmark> result = repository.checkByIdPcode(loginID, product_code);
 		if (result.isPresent())
-			return 1;
+			return true;
 		else
-			return 0;
+			return false;
 	}
+
+	@Override
+	public void deleteByProductCode(String loginID, int product_code) {
+		repository.deleteByProductCode(loginID, product_code);
+	}
+
 
 	@Override
 	public Bookmark selectOne(int product_code) {

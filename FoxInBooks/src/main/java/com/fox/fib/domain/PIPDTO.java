@@ -7,4 +7,5 @@ public class PIPDTO {
 	private int product_code;
 	private String id;
 	private int proamount;
+	private String opt;
 }

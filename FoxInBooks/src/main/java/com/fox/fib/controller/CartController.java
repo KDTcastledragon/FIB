@@ -57,9 +57,7 @@ public class CartController {
 	}
 
 
-
 	// ===============================================================================================================
-
 	@PostMapping(value = "/cartOnSaveAction")
 	public ResponseEntity<?> cartOnSaveAction(@RequestBody PIPDTO savedDataOnCart, HttpSession session, Product pentity, Cart centity)
 		throws IOException {
@@ -166,8 +164,6 @@ public class CartController {
 	}
 
 	// ==========================================================================================
-
-
 	@PostMapping(value = "/cartProamountUpdateAction")
 	public ResponseEntity<?> cartProamountUpdateAction(@RequestBody Cart UpdatedProamountData, Product pentity, Cart centity)
 		throws IOException {
