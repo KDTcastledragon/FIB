@@ -23,7 +23,6 @@ const ProductListPage = () => {
   //   };
   // }, []);
 
-  //  --내 프젝 비번임
 
   //==========================================================================================================================
   const loginID = sessionStorage.getItem("loginID");
@@ -95,12 +94,12 @@ const ProductListPage = () => {
       axios
         .post(`/product/selectListByOptions`, data)
         .then((r) => {
-          console.log(`옵션검색 성공. post의 객체 : ${JSON.stringify(data)}`);
+          // console.log(`옵션검색 성공. post의 객체 : ${JSON.stringify(data)}`);
           setProductData(r.data);
-          console.log(`옵션검색 성공 현재 선택 옵션 : ${JSON.stringify(selectedOptions)}`);
+          // console.log(`옵션검색 성공 현재 선택 옵션 : ${JSON.stringify(selectedOptions)}`);
         }).catch((e) => {
-          console.log(`옵션검색 실패 : ${e.messege}`);
-          console.log(`현재 선택 옵션 : ${selectedOptions}`);
+          // console.log(`옵션검색 실패 : ${e.messege}`);
+          // console.log(`현재 선택 옵션 : ${selectedOptions}`);
           alert(`옵션검색 실패`);
         })
     }
