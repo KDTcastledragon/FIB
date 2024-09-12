@@ -1,0 +1,90 @@
+.footer_container {
+    width: 100%;
+    /* min-width를 줘야 화면이 바디의 1240px보다 작아져도
+       백그라운드 영역이 다 먹는다. */
+    min-width: 1240px;
+    background-color: silver;
+    margin-top: 50px;
+}
+
+.footer_container_2 {
+    width: 100%;
+    min-width: 1240px;
+    text-align: center;
+    line-height: 70px;
+    border-top: 1px solid #cfcdcd;
+    color: #cfcdcd;
+}
+
+.footer_2_text_container {
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_2_text {
+    margin-left: 5px;
+}
+
+.footer {
+    display: flex;
+    width: 1240px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+/* 풋터 : 사이트 운영방침 + 회사소개 */
+.footer_menu>ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer_menu>ul>li {
+    display: flex;
+    font-size: 12px;
+}
+
+.footer_menu>ul>li>div {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.company_info {
+    display: inline-block;
+    font-size: 12px;
+    margin: auto 0;
+}
+
+.company_info span {
+    margin-right: 10px;
+}
+
+
+
+/* 풋터 : 고객센터 관련 */
+.customer_center {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.customer_service_category {
+    margin: 0 auto;
+}
+
+.customer_center .customer_service {
+    display: inline-block;
+    line-height: 40px;
+}
+
+
+.footer_notice,
+.footer_inquires,
+.footer_faq {
+    display: block;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid;
+    margin-top: 5px;
+    margin: 5px auto;
+    background-color: aliceblue;
+}

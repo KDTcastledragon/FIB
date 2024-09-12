@@ -1,0 +1,55 @@
+.RecentSideBarItemContainer {
+    width: 200px;
+    margin: 11px auto;
+    border-radius: 5px;
+    background-color: rgb(232, 231, 231);
+    font-size: 13px;
+    border: 1px solid rgb(174, 173, 173);
+    display: flex;
+    height: 65px;
+}
+
+.RecentSideBarItemImage {
+    box-sizing: border-box;
+    width: 50px;
+    height: 100%;
+    border: 1px solid rgb(194, 194, 194);
+}
+
+.RecentSideBarItemImage:hover {
+    border: 2px solid rgb(119, 175, 97);
+}
+
+.recentSideBarTitlePrice {
+    display: flex;
+    flex-direction: column;
+}
+
+.basket_preview_item_title {
+    font-size: 12px;
+    height: 20px;
+    line-height: 22px;
+    margin-left: 3px;
+    margin-bottom: 10px;
+    word-break: break-all;
+    text-align: justify;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+.basket_preview_item_title:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.basket_preview_item_price {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.basket_preview_item_amount button {
+    margin: 3px 5px;
+}

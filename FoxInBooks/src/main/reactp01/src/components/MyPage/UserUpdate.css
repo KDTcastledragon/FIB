@@ -1,0 +1,128 @@
+.UserUpdate {
+    width: 1240px;
+    margin: auto;
+}
+
+/* ====================== */
+
+.UserUpdate table {
+    border: 1px solid #666;
+    border-collapse: collapse;
+    text-align: left;
+    margin: auto;
+    width: 100%;
+}
+
+.UserUpdate tbody {
+    flex-direction: column;
+}
+
+.UserUpdate table th {
+    width: 200px;
+    background-color: honeydew;
+    border-right: 1px solid #666;
+    font-size: 20px;
+    text-indent: 10px;
+}
+
+.UserUpdate table tr {
+    border: 1px solid #666;
+    line-height: 50px;
+}
+
+.userUpdate_input {
+    line-height: 30px;
+    font-size: 20px;
+    padding: 0 10px;
+    margin: auto 20px;
+}
+
+.error-message {
+    color: red;
+    font-size: 70%;
+    margin-left: 20px;
+}
+
+/* ============================== */
+
+.user_update_profile {
+    width: 150px;
+    height: 150px;
+    margin-top: 5px;
+}
+
+.user_update_profile_size {
+    font-weight: initial;
+    font-size: 16px;
+}
+
+#user_update_profile_img {
+    width: 150px;
+    height: 150px;
+}
+
+/* ============================= */
+
+.UserUpdate span a {
+    background-color: whitesmoke;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+/* ================================= */
+/* 주소 관리 */
+
+.userUpdate_address input {
+    width: 700px;
+    margin-top: 10px;
+    line-height: 30px;
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+#userUpdate_address_zip {
+    width: 200px;
+}
+
+/* ==================================== */
+
+.user_update_sms_explain,
+.user_update_email_explain {
+    margin-left: 10px;
+    color: rgb(119, 175, 107);
+}
+
+/* ======================================== */
+
+.user_update_btn {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.user_update_submit_btn {
+    width: 150px;
+    height: 50px;
+    margin: auto 50px;
+    font-size: 20px;
+    background-color: rgb(119, 175, 107);
+    border: none;
+    border-radius: 5px;
+    color: white;
+
+    &:disabled {
+        background-color: #666;
+    }
+}
+
+.user_update_btn .user_update_cancel_btn {
+    background-color: rgb(119, 175, 107);
+    width: 150px;
+    height: 50px;
+    border: 1px solid;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+}

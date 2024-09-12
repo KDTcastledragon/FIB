@@ -1,0 +1,288 @@
+@charset "UTF-8";
+
+body {
+    width: 1500px;
+    margin: 0 auto; 
+}
+
+/* 모든 onclick관련 커서 포인터모양으로 */
+.textlink {
+	cursor:pointer;
+}
+
+/* (home)관리자페이지 관련 css  */
+.adminList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.adminListHome {
+    background-color: #D9F08F;
+    color: #fff;
+    padding: 10px;
+    font-weight: bold;
+    margin-bottom: 5px; /* 관리목록 간격 조절 */
+}
+
+.adminListHomeA {
+    display: inline-block;
+    width: 100%;
+    height: 20px;
+    box-sizing: border-box;
+}
+
+.adminListHeader {
+	background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    font-weight: bold;
+    margin-bottom: 10px; /* 관리목록 간격 조절 */
+}
+
+.listGroup {
+    padding: 0;
+}
+
+.listGroupItem {
+    list-style: none;
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.listGroupItem:hover {
+    background-color: #f8f9fa;
+}
+
+.listGroupItem.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.container-fluid {
+    width: 100%;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+.row {
+    display: flex;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.adminListArea,
+.resultArea {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding: 10px;
+}
+
+.adminListArea {
+    flex: 0 0 15%;
+    max-width: 15%;
+}
+
+.resultArea {
+    flex: 0 0 85%;
+    max-width: 85%;
+}
+
+/* 관리자페이지 메인상태에서 보여지는 컨텐츠 */
+.dailyOrderSummaryItem {
+	display: inline-block;
+    width: 120px; /* 너비 설정 */
+    height: 100px; /* 높이 설정 */
+    margin: 10px; /* 바깥쪽 여백 설정 */
+    padding: 10px; /* 안쪽 여백 설정 */
+    border: 1px solid #ddd; /* 테두리 스타일 및 색상 설정 */
+    box-sizing: border-box; /* 테두리 포함한 크기로 설정 */
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.dailyOrderSummary {
+    width: 80%;
+}
+
+.max {
+    background-color: #EB756A;
+}
+
+
+/* 답변안된 1:1문의글 최대 5개 보이기 
+   내용이 길어져서 줄바꿈을하더라도 UnAnsweredInquiriesItem의
+   수직정렬이 흐트러지지않기위해 display: flex; flex-wrap: wrap; 사용*/
+.dailyOrderSummary {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.UnAnsweredInquiriesContainer {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 200px;
+}
+
+.UnAnsweredInquiriesContainer h4 {
+	margin: 10px;
+}
+
+.UnAnsweredInquiriesItem {
+	display: inline-block;
+    width: 200px; /* 너비 설정 */
+    height: 150px; /* 높이 설정 */
+    margin: 10px; /* 바깥쪽 여백 설정 */
+    padding: 10px; /* 안쪽 여백 설정 */
+    border: 1px solid #ddd; /* 테두리 스타일 및 색상 설정 */
+    box-sizing: border-box; /* 테두리 포함한 크기로 설정 */
+}
+
+/* UnAnsweredInquiriesTitle에 적용할 스타일 */
+.UnAnsweredInquiriesTitle {
+	max-height: 1.5em;
+    font-weight: bold; /* 굵은 글씨체 설정 */
+    margin-bottom: 5px; /* 하단 여백 설정 */
+    overflow: hidden; /* 내용이 넘칠 경우 감추기 */
+    text-overflow: ellipsis; /* 넘치는 내용에 ... 표시 */
+}
+
+/* UnAnsweredInquiriesContent에 적용할 스타일 */
+.UnAnsweredInquiriesContent {
+    max-height: 3em;
+    font-size: 14px; /* 글씨 크기 설정 */
+    overflow: hidden; /* 내용이 넘칠 경우 감추기 */
+    text-overflow: ellipsis; /* 넘치는 내용에 ... 표시 */
+}
+
+.notice_register_search,
+.faq_register_search,
+.coupon_register_search {
+	width: 95%;
+	display : flex;
+	justify-content: space-between;
+	padding: 10px 0px;
+}
+
+.inquiry_register_search {
+	width: 95%;
+	text-align : right;
+	padding: 10px 0px;
+}
+
+.underline {
+	width: 95%;
+	height: 2px;
+	background-color: #007bff;
+	margin-bottom: 20px
+}
+
+.notice_category,
+.faq_category,
+.inquiry_category {
+	width: 150px;
+	height: 30px;
+	border-color: lightgrey;
+}
+
+.notice_search_input,
+.faq_search_input,
+.coupon_search_input{
+	width: 250px;
+	height: 30px;
+	border: 1px solid lightgrey;
+}
+
+.searchBtn {
+	width: 50px;
+	height: 30px;
+	color: white;
+	background-color: #007bff;
+	border: none;
+	cursor: pointer;
+}
+
+/* 관리자 테이블 관련 ========================================================================== */
+.noticeTable,
+.faqTable,
+.inquiryTable,
+.couponTable {
+	border-collapse: collapse;
+	width:95%;
+	text-align: center;
+	font-size: 15px;
+	background-color: white;
+}
+
+.noticeTable th,
+.faqTable th,
+.inquiryTable th,
+.couponTable th {
+	font-size: 14px;
+	background-color: lightgrey;
+	border: 1px solid; 
+}
+
+.noticeTable tr,
+.faqTable tr,
+.inquiryTable tr,
+.couponTable tr {
+	height: 50px;
+	font-size: 14px;
+}
+
+.noticeTable td,
+.faqTable td,
+.inquiryTable td,
+.couponTable td {
+	border: 1px solid; 
+}
+
+/* 관리목록 등록,수정 테이블 관련 ========================================================================== */
+.noticeRegisterTable th,
+.noticeEditFormTable th,
+.faqRegisterTable th,
+.faqEditFormTable th,
+.inquiryAnswerFormTable th,
+.couponRegisterTable th,
+.couponEditFormTable th {
+	background-color: lightgrey;
+}
+
+/* 페이지네이션 ========================================================================== */
+
+.pagination_wrap {
+	width:95%;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.pagination_wrap:before {
+	content: "<<";
+}
+
+.pagination_wrap:after {
+	content: ">>";
+}
+
+.pagination_wrap span {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.pagination_wrap .currentPage {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+/* 1:1문의 관리============================================================================= */

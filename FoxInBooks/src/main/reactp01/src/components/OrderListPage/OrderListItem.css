@@ -1,0 +1,153 @@
+.order_list_product_card_container {
+    display: flex;
+    height: 100px;
+}
+
+.order_list_item_date_number,
+.order_list_item_product_infomation,
+.order_list_item_price_amount,
+.order_list_item_delivery-state,
+.order_list_item_cancel_btn {
+    background-color: rgb(255, 255, 255);
+    height: 100px;
+    border: 1px solid black;
+    text-align: center;
+    display: flex;
+
+}
+
+.order_list_item_date_number {
+    width: 200px;
+}
+
+.order_list_item_product_infomation {
+    width: 400px;
+}
+
+.order_list_item_price_amount {
+    width: 150px;
+}
+
+.order_list_item_delivery-state {
+    width: 200px;
+}
+
+.order_list_item_cancel_btn {
+    width: 150px;
+}
+
+
+.order_list_item_date_number {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.order_list_item_date_number>div:nth-child(1) {
+    margin-bottom: 10px;
+}
+
+.order_list_item_product_infomation img {
+    display: inline-block;
+    width: 58px;
+    height: 80px;
+    border: 1px solid gray;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    line-height: 40px;
+}
+
+.order_list_item_title {
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+
+.order_list_item_from {
+    text-align: center;
+    background-color: rgb(132, 132, 132);
+    color: white;
+    border-radius: 3px;
+    width: 40px;
+    height: 16px;
+    font-size: 11px;
+    margin-right: 5px;
+    margin-top: 7px;
+    margin-left: 5px;
+}
+
+.order_list_item_category {
+    background-color: rgb(132, 132, 132);
+    color: white;
+    border-radius: 3px;
+    width: 40px;
+    height: 16px;
+    font-size: 11px;
+    margin-top: 7px;
+}
+
+.col-product_price_origin {
+    font-size: 13px;
+}
+
+.col-product_price_saled {
+    font-size: 16px;
+}
+
+.col-product_price_saled_num {
+    font-size: 18px;
+    color: red;
+    font-weight: bold;
+}
+
+.order_list_item_price_amount {
+    flex-direction: column;
+    font-size: 13px;
+    gap: 5px;
+    justify-content: center;
+}
+
+.order_list_item_delivery-state {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
+.order_list_item_delivery-state div {
+    font-size: 15px;
+    color: blue;
+    font-weight: bold;
+}
+
+.order_list_item_delivery-state button {
+    width: 70px;
+    height: 32px;
+    border: none;
+    background-color: rgb(119, 175, 107);
+    color: white;
+    font-weight: bold;
+}
+
+.order_list_item_delivery-state button:hover {
+    background-color: rgb(67, 103, 59);
+}
+
+.order_list_item_cancel_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.order_list_item_cancel_btn button {
+    width: 80px;
+    height: 50px;
+    background-color: rgb(255, 88, 88);
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+.order_list_item_cancel_btn button:hover {
+    background-color: rgb(255, 0, 0);
+}

@@ -1,0 +1,67 @@
+.int {
+    /* background-color: rgb(255, 232, 248); */
+    margin: auto;
+    width: 80%;
+    text-align: left;
+    white-space: pre-line;
+}
+
+.int>div {
+    margin: 50px 0;
+}
+
+.int_int {
+    /* background-color: rgb(255, 205, 166); */
+    width: 100%;
+}
+
+.int_int_L {
+    /* background-color: rgb(255, 205, 166); */
+    width: 20%;
+}
+
+.int_int_R {
+    /* background-color: rgb(190, 194, 255); */
+    width: 80%;
+}
+
+.int_int_R img {
+    width: 700px;
+}
+
+.int_contents {
+    /* background-color: rgb(216, 235, 255); */
+    width: 100%;
+}
+
+.int_contents_L {
+    /* background-color: rgb(255, 205, 166); */
+    width: 20%;
+}
+
+.int_contents_R {
+    /* background-color: rgb(190, 194, 255); */
+    width: 80%;
+}
+
+.int_author {
+    /* background-color: rgb(220, 216, 255); */
+    width: 100%;
+}
+
+.int_author_L {
+    /* background-color: rgb(255, 205, 166); */
+    width: 20%;
+}
+
+.int_author_R {
+    /* background-color: rgb(190, 194, 255); */
+    width: 80%;
+}
+
+.int_info_R,
+.int_int_R,
+.int_contents_R,
+.int_author_R {
+    font-size: 14px;
+}

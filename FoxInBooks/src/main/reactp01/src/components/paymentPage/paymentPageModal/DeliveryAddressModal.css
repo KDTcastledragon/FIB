@@ -1,0 +1,43 @@
+.AddressModalTable {
+    border-collapse: collapse;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.AddressModalTable tr td {
+    padding: 20px 0;
+    border: 1px solid grey;
+    border-left: none;
+    border-right: none;
+    text-align: center;
+    font-size: 14px;
+}
+
+.AddressModalTable thead tr {
+    font-weight: bold;
+}
+
+.AddressModalTable1 {
+    width: 5%;
+}
+
+.AddressModalTable2 {
+    width: 15%;
+}
+
+.AddressModalTable3 {
+    width: 50%;
+}
+
+.AddressModalTable4 {
+    width: 15%;
+}
+
+.AddressModalTable5 {
+    width: 15%;
+}
+
+.addressAs{
+    font-weight: bold;
+    color: rgb(119, 175, 107);
+}

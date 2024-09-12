@@ -1,0 +1,130 @@
+.review {
+    /* background-color: rgb(236, 202, 255); */
+    margin: 40px auto;
+    width: 80%;
+    text-align: left;
+}
+
+.review_box {
+    /* background-color: rgb(210, 210, 255); */
+    width: 100%;
+}
+
+.review_L {
+    /* background-color: antiquewhite; */
+    width: 20%;
+}
+
+.review_write {
+    /* background-color: rgb(252, 183, 171); */
+    width: 80%;
+}
+
+.review_star_cover {
+    /* background-color: rgb(253, 183, 133); */
+    height: 30px;
+}
+
+.review_star {
+    /* background-color: rgb(219, 255, 196); */
+    display: inline-block;
+    direction: rtl;
+}
+
+.star {
+    width: 25px;
+    height: 25px;
+    fill: lightgrey;
+}
+
+.star:hover,
+.star:hover~.star {
+    fill: rgb(255, 88, 88);
+    cursor: pointer;
+}
+
+.star_select {
+    width: 25px;
+    height: 25px;
+    fill: rgb(255, 88, 88);
+    cursor: pointer;
+}
+
+.review_note_cover {
+    /* background-color: rgb(202, 255, 237); */
+    width: 100%;
+}
+
+.review_note {
+    /* background-color: rgb(255, 205, 205); */
+    width: 70%;
+}
+
+.review_note_01 {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100px;
+    resize: none;
+    padding: 10px;
+}
+
+.review_image_cover {
+    /* background-color: aquamarine; */
+    margin-left: 10px;
+    width: 10%;
+    text-align: center;
+}
+
+.review_image_cover img {
+    background-color: rgb(243, 243, 243);
+    display: block;
+    width: 77px;
+    height: 77px;
+    text-align: center;
+    object-fit: cover;
+}
+
+.review_image_cover label {
+    background-color: rgb(182, 182, 182);
+    display: block;
+    width: 100%;
+    height: 20%;
+    margin-top: 3px;
+    font-size: 14px;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.review_image_cover input {
+    display: none;
+}
+
+.review_btn_cover {
+    /* background-color: rgb(226, 196, 255); */
+    width: 20%;
+    text-align: right;
+}
+
+.review_btn {
+    background-color: rgb(255, 88, 88);
+    width: 95%;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    color: white;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.review_btn:hover {
+    background-color: rgb(255, 120, 120);
+}
+
+.review_con_box {
+    /* background-color: rgb(210, 255, 240); */
+    margin-left: calc(100% * 0.2);
+    width: 80%;
+}

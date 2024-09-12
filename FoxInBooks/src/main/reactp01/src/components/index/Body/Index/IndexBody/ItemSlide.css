@@ -1,0 +1,89 @@
+.index_main_section {
+    width: 1240px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.item_info_img {
+    width: 180px;
+    height: 250px;
+    margin-top: 10px;
+    box-shadow: 0 0 10px gray;
+}
+
+.slide_list_container ul>li {
+    list-style: none;
+}
+
+.index_slide_table01_list_size {
+    width: 248px;
+    height: 400px;
+    text-align: center;
+    padding: 0;
+}
+
+.slide_item {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.item_info_box {
+    width: 100%;
+    display: inline-block;
+
+}
+
+.item_info_box_price,
+.item_info_box_discount,
+.item_info_box_discount_price {
+    margin: 0px;
+}
+
+/* .item_info_box_price {
+    text-decoration: line-through;
+} */
+
+.item_info_box_discount {
+    font-size: 10px;
+    color: red;
+}
+
+.item_info_img:hover {
+    /* faq_item을 호버할때 적용되는 css라서
+       faq_open과 속성이 동일해야 이질감 없다. */
+    cursor: pointer;
+    box-shadow: 0px 0px 15px 5px rgb(143, 143, 143);
+
+}
+
+.slide_list_container {
+    width: calc(25% - 10px);
+    /* 4개의 이미지이므로 25% */
+    max-width: 248px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.book_item_title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.book_item_title_hr {
+    margin: 15px 0;
+}
+
+
+@media (max-width: 1240px) {
+    .slide_list_container {
+        width: calc(25% - 10px);
+        /* 4개의 이미지이므로 25% */
+        max-width: 248px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+    }
+}

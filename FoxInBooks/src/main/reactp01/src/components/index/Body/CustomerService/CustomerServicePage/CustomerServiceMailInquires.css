@@ -1,0 +1,224 @@
+.customer_service_mail_inquires {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+.inquires {
+    text-align: center;
+    line-height: 100px;
+}
+
+/* 내 문의내역, 문의등록 */
+.inquires_category {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+/* 내 문의내역, 문의등록 위치css */
+.inquires_category span {
+    font-size: 14px;
+    color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.inquires_category span:hover {
+    font-weight: bold;
+    background-color: #CEE3FE;
+}
+
+/* 내 문의내역, 내 문의내역 디테일 */
+.my_inquiry_container,
+.my_inquiry_list_one {
+    width: 80%;
+    margin: 0 auto;
+    border-top: 1px solid;
+}
+
+.my_inquiry_container {
+    border-spacing: 0px;
+}
+
+.my_inquiry_container thead {
+    background-color: #F9F2EC;
+}
+
+.my_inquiry_container th {
+    padding: 20px 0;
+}
+
+.my_inquiry_container td {
+    text-align: center;
+    border-top: 1px solid #efefef;
+}
+
+.my_inquiry_list {
+    height: 50px;
+}
+
+.my_inquiry_list_title:hover {
+    cursor: pointer;
+    font-weight: bold;
+    transform: scale(1.01);
+}
+
+/* 내 문의내역 클릭시 디테일 페이지 */
+.my_inquiry_title {
+    font-size: 22px;
+    line-height: 30px;
+    background-color: #edf2fb;
+    padding: 15px 10px;
+    border-bottom: 1px solid #dedede;
+}
+
+.my_inquiry_title::before {
+    content: 'Q. ';
+}
+
+.my_inquiry_content {
+    line-height: 2;
+    padding: 25px 10px;
+    border-bottom: 1px solid #dedede;
+}
+
+
+/* 내 문의내용, 답변======================================================================= */
+.my_inquiry_answer_container {
+    font-size: 18px;
+    line-height: 100%;
+    padding: 25px 10px;
+    border-bottom: 1px solid #dedede;
+}
+
+/* 문의 답변내용 인사말 */
+.inquiry_answer_intro {
+    font-size: 18px;
+}
+
+.inquiry_answer_intro::before {
+    content: 'A. ';
+}
+
+/* 문의 답변내용 마지막 인사말 */
+.iquiry_answer_end {
+    font-size: 14px;
+}
+
+.my_inquiry_answer_content {
+    line-height: 2;
+}
+
+
+/* 문의내용, 답변내용에서 줄바꿈 적용시키는 css */
+.my_inquiry_content,
+.my_inquiry_answer_container {
+    white-space: pre-line;
+}
+
+
+/*======================================================================= */
+figure {
+    margin: 0;
+}
+
+.mail_inquires_tabel {
+    width: 80%;
+    border-top: 2px solid rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+}
+
+.mail_inquires_tabel th {
+    width: 130px;
+    height: 50px;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    background-color: rgb(237, 248, 255);
+}
+
+.mail_inquires_tabel td {
+    padding: 20px;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
+}
+
+.inquries_select {
+    width: 150px;
+    height: 25px;
+    background-color: rgb(241, 241, 241);
+}
+
+.inquires_userid {
+    height: 25px;
+}
+
+.inquires_title {
+    width: 80%;
+    height: 25px;
+}
+
+.inquires_email {
+    width: 350px;
+    height: 25px;
+}
+
+.inquires_email_change {
+    width: 100px;
+    height: 30px;
+    margin-left: 10px;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    background-color: gray;
+    border: none;
+    border-radius: 5px;
+}
+
+.inquires_email_change:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.inquires_content {
+    width: 80%;
+    resize: none;
+}
+
+.file_upload {
+    height: 25px;
+}
+
+.file {
+    font-size: 12px;
+    margin-left: 10px;
+    padding: 5px;
+    border: 1px dotted rgba(0, 0, 0, 0.2);
+    color: white;
+    background-color: gray;
+    border-radius: 5px;
+}
+
+.file:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.file_found {
+    display: none;
+}
+
+.component_btn {
+    text-align: center;
+}
+
+.btn_submit,
+.btn_cencel {
+    width: 150px;
+    height: 50px;
+    margin: 20px 30px;
+}

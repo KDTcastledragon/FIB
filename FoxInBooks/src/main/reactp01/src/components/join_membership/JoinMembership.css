@@ -1,0 +1,269 @@
+.JoinMembership {
+    flex-direction: column;
+    width: 1240px;
+    margin: auto;
+}
+
+.joinMembership_logo_container {
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.toLoginButton {
+    text-align: right;
+}
+
+.toLoginButton button {
+    width: 130px;
+    line-height: 40px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(119, 175, 107);
+    margin-bottom: 20px;
+
+}
+
+.join_membership_form {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+.join_membership_fieldset {
+    border: 0;
+    font-size: 20px;
+    background-color: rgb(248, 255, 249);
+}
+
+.join_membership_section_1 {
+    font-size: 30px;
+    width: 20%;
+    background-color: honeydew;
+    padding: 10px;
+}
+
+.join_membership_section_1_info {
+    font-size: 70%;
+    color: gray;
+}
+
+.join_membership_section_1_explain {
+    font-size: 13px;
+    word-break: keep-all;
+    margin-top: 10px;
+    color: red;
+    line-height: 20px;
+}
+
+.join_membership_section_1_icon {
+    margin-right: 5px;
+    margin-top: 2px;
+}
+
+.join_dupCheck_button {
+    margin-left: 20px;
+    line-height: 38px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(119, 175, 107);
+}
+
+.join_membership_section_2 {
+    flex-flow: column;
+    margin-left: 20px;
+}
+
+.join_membership_section_2>div {
+    margin: 10px 0;
+}
+
+.check_circle {
+    vertical-align: middle;
+    color: rgb(3, 214, 38);
+}
+
+.JoinMembership input {
+    height: 38px;
+    line-height: 38px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: whitesmoke;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 0 5px;
+}
+
+.JoinMembership select {
+    height: 38px;
+    line-height: 38px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: whitesmoke;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 0 5px;
+}
+
+#email_domain {
+    width: 150px;
+}
+
+.join_membership_birth {
+    margin-right: 20px;
+}
+
+.join_membership_basic_span {
+    display: inline-block;
+    width: 200px;
+    font-size: 16px;
+}
+
+.join_membership_id_check {
+    height: 40px;
+    line-height: 40px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 15px;
+}
+
+#year_1,
+#year_3,
+#year_5,
+#end,
+#male,
+#female {
+    height: initial;
+    margin-right: 10px;
+}
+
+.join_membership_radio label {
+    margin-right: 20px;
+}
+
+#year_birth,
+#month_birth,
+#day_birth {
+    width: 70px;
+    height: 40px;
+    font-size: 16px;
+}
+
+.join_error-message {
+    color: red;
+    font-size: 70%;
+    margin-left: 200px;
+    margin-top: 10px;
+}
+
+.join_dup-message {
+    color: green;
+    font-size: 70%;
+    margin-left: 200px;
+    margin-top: 10px;
+}
+
+.required-indicator {
+    color: red;
+}
+
+/* ====================================== */
+
+.hidden {
+    display: none;
+}
+
+.join_membership_checkbox label {
+    margin: auto 10px;
+    color: rgb(119, 175, 107);
+}
+
+.join_membership_address {
+    width: 50px;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 50px;
+}
+
+.join_membership_address_search_btn a {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
+
+.join_membership_address_explain {
+    font-size: 15px;
+    color: gray;
+    margin-left: 20px;
+}
+
+.address_margin {
+    margin: 20px auto;
+}
+
+/* =================================== */
+
+.join_membership_check_all label {
+    margin: auto 10px;
+    font-weight: bold;
+    color: rgb(119, 175, 107);
+}
+
+.join_membership_agree_explain {
+    color: rgb(119, 175, 107);
+}
+
+.join_membership_agree_checkbox {
+    align-items: center;
+}
+
+.join_membership_agree_checkbox input {
+    margin-right: 15px;
+}
+
+.join_membership_termsOfService_detail {
+    margin-left: 50px;
+    font-size: 70%;
+    color: gray;
+}
+
+.join_membership_termsOfService_detail:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* ======================================= */
+
+.join_membership_hr {
+    border: 2px solid rgb(119, 175, 107);
+}
+
+.join_membership_btn_div {
+    text-align: center;
+}
+
+.join_membership_submit_btn {
+    background-color: rgb(119, 175, 107);
+    border: 0;
+    font-size: 20px;
+    width: 300px;
+    line-height: 50px;
+    font-weight: bold;
+    color: white;
+    margin-top: 20px;
+
+    /* 로그인 버튼 비활성화 */
+    &:disabled {
+        background-color: #666
+    }
+}

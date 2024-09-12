@@ -1,0 +1,68 @@
+.UserInfo {
+    width: 1240px;
+    margin: auto;
+}
+
+.bi-person-circle {
+    color: rgb(119, 175, 107);
+}
+
+.user_info_main_text {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.user_info_main_text h1 {
+    margin-left: 20px;
+}
+
+.user_info_main_text+div h2 {
+    color: rgb(119, 175, 107);
+}
+
+/* ================================ */
+.userInfo_select_container {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    padding: 0;
+}
+
+.userInfo_select {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.userInfo_update,
+.userPassword_update,
+.userDelete,
+.userAddress {
+    width: 50%;
+    line-height: 50px;
+    list-style: none;
+    border: 1px solid #b8c2ba;
+    border-radius: 5px 5px 0 0;
+    border-bottom: none;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.userInfo_update.selected,
+.userPassword_update.selected,
+.userDelete.selected,
+.userAddress.selected {
+    font-weight: bold;
+    color: green;
+    border: 2px solid rgb(119, 175, 107);
+    border-bottom: none;
+}
+
+.userInfo_update:not(.selected),
+.userPassword_update:not(.selected),
+.userDelete:not(.selected),
+.userAddress:not(.selected) {
+    color: #b8c2ba;
+    border-bottom: 2px solid rgb(119, 175, 107);
+}

@@ -1,0 +1,66 @@
+.RecentSideBar {
+  border: 1px solid rgb(241, 241, 241);
+  width: 240px;
+  height: 520px;
+  border-radius: 3px;
+  /* background-color: rgb(235, 255, 236); */
+  background-color: rgb(249, 249, 249);
+
+}
+
+.RecentSideBarBookmarkPageLinkWrapper {
+  margin-bottom: 20px;
+}
+
+.RecentSideBarCartPageLink,
+.RecentSideBarBookmarkPageLink,
+.recentBarProductListLabel {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background-color: rgb(122, 194, 94);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+.RecentSideBarBookmarkPageLink:hover {
+  background-color: rgb(88, 148, 64);
+}
+
+.RecentSideBarHeart {
+  color: rgb(255, 88, 88);
+  display: inline-block;
+  margin-bottom: -8px;
+  margin-left: 5px;
+}
+
+.RecentSideBarCartPageLink {
+  background-color: rgb(119, 175, 97);
+  margin-bottom: 20px;
+}
+
+.RecentSideBarCartPageLink:hover {
+  background-color: rgb(88, 148, 64);
+}
+
+.recentBarProductListLabel {
+  background-color: rgb(155, 167, 150);
+  text-align: center;
+}
+
+.RecentSideBarCartIcon {
+  color: rgb(0, 0, 0);
+  display: inline-block;
+  margin-bottom: -8px;
+  margin-left: 5px;
+}
+
+.recentDataBeforeLoginID {
+  text-align: center;
+  height: 200px;
+  line-height: 200px;
+}

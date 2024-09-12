@@ -1,0 +1,78 @@
+.BestSellerPageContainer {
+    margin: 0 auto;
+    margin-top: 30px;
+    /* border: 3px solid red; */
+    width: 1500px;
+    display: flex;
+}
+
+.BestSellerDisplayContentContainer {
+    /* border: 5px solid green; */
+    width: 920px;
+    margin: 0 auto;
+}
+
+/* 상품판매 ======================================================================================================= */
+.BestSellerPageTitle {
+    font-size: 37px;
+    font-weight: bold;
+    font-family: italic;
+}
+
+.BestSellerPageSubtitle {
+    font-size: 12px;
+}
+
+
+
+.ProductListPageTitleAndSize {
+    margin-top: 20px;
+}
+
+.ProductListPageCurrentKeywordTitle {
+    font-size: 25px;
+    font-weight: bold;
+    margin-right: 10px;
+    /* border:3px solid green; */
+}
+
+.ProductListPageHandleSizeBs {
+    float: right;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+}
+
+.ProductListPageCurrentKeywordTitleHrLine {
+    margin-top: 15px;
+    margin-bottom: 38px;
+}
+
+.productListItemMapedArea {
+    margin: 0 auto;
+}
+
+.productList_pageNationButton_selected,
+.productList_pageNationButton_ {
+    display: inline-block;
+    margin: 3px 20px;
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.productList_pageNationButton_selected {
+    background-color: red;
+}
+
+.productListPage_pageNationButton {
+    text-align: center;
+}
+
+/* 사이드바======================================================================================================= */
+.RecentSideBar {
+    /* margin-top: 20px; */
+    transition: transform 0.9s ease;
+}

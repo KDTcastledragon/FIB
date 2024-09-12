@@ -1,0 +1,10 @@
+.detailPage {
+    margin: 50px auto;
+    width: 1240px;
+}
+
+.DetailPage_line {
+    background-color: rgb(233, 233, 233);
+    height: 1px;
+    border: 0px;
+}

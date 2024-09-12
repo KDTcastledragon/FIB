@@ -1,0 +1,70 @@
+.FindUserInfo {
+    flex-direction: column;
+    width: 1240px;
+    margin: auto;
+    margin-bottom: 70px;
+}
+
+.findUserInfo_logo_container {
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.find_userInfo_logo {
+    width: 70%;
+}
+
+.findUserInfo_sub_text {
+    margin-bottom: 15px;
+    font-size: 17px;
+    align-items: center;
+    justify-content: center;
+    color: red;
+}
+
+.findUserInfo_sub_text_icon {
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.findUserInfo_select_container {
+    width: 30%;
+    text-align: center;
+    margin: auto;
+    padding: 0;
+}
+
+.findUserInfo_select {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.findUserInfo_select_id,
+.findUserInfo_select_password {
+    width: 50%;
+    line-height: 50px;
+    list-style: none;
+    border: 1px solid #b8c2ba;
+    border-radius: 5px 5px 0 0;
+    border-bottom: none;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.findUserInfo_select_id.selected,
+.findUserInfo_select_password.selected {
+    font-weight: bold;
+    color: green;
+    border: 2px solid rgb(119, 175, 107);
+    border-bottom: none;
+}
+
+.findUserInfo_select_id:not(.selected),
+.findUserInfo_select_password:not(.selected) {
+    color: #b8c2ba;
+    border-bottom: 2px solid rgb(119, 175, 107);
+}

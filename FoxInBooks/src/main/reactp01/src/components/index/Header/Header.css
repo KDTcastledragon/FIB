@@ -1,0 +1,202 @@
+.header {
+    background-color: white;
+    width: 100%;
+    min-width: 1240px;
+    border-bottom: 1px solid rgb(194, 194, 194);
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+.header_2 {
+    height: 100px;
+}
+
+.header_container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    width: 1240px;
+    height: 101px;
+    text-align: center;
+    top: 0;
+    z-index: 3;
+    margin: 0 auto;
+
+}
+
+
+/* 로고 이미지 */
+.logo {
+    width: 120px;
+    height: 90px;
+    background: url(../../../../public/img/fox_logo.png);
+    background-size: 100% 100%;
+    margin: 0 auto;
+    align-self: flex-start;
+    text-align: left;
+    text-indent: -9999em;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.header_searchbox img {
+    width: 20px;
+    height: 20px;
+}
+
+.header_category ul,
+.header_category li {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+}
+
+.header_searchbox {
+    position: relative;
+}
+
+.book_searchBox {
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 24px;
+    border: 3px solid rgb(119, 175, 107);
+    border-radius: 50px;
+    /* margin: calc((150px - 113px)/2) auto; */
+    margin: 10px auto;
+    margin-bottom: 0;
+    padding: 10px 12px;
+    font-size: 13px;
+}
+
+.book_searchBox:focus {
+    outline: 0px solid rgb(119, 175, 107);
+
+}
+
+.search_img {
+    position: absolute;
+    top: 16px;
+    right: 25px;
+    margin: 0;
+}
+
+.user_support,
+.user_support ul {
+    margin-top: 15px;
+    padding: 0;
+    list-style: none;
+
+}
+
+.user_support ul {
+    display: flex;
+    justify-content: center;
+}
+
+.user_support ul li {
+    font-size: 12px;
+    margin: 0px 5px;
+}
+
+.admin {
+    line-height: 70px;
+}
+
+/* ====================================== */
+.headerCategory {
+    width: 630px;
+    height: 40px;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 2px;
+}
+
+.headerCategory>button {
+    display: inline-block;
+    width: 120px;
+    height: 38px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    background: none;
+    /* background-color: bisque; */
+}
+
+.headerCategory>button:hover {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+/* 
+.header_maincategory,
+.header_maincategory_list {
+    text-align: center;
+}
+
+.header_maincategory_list {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    position: relative;
+    background-color: aqua;
+}
+
+.header_maincategory_menu_category {
+    font-size: 24px;
+    margin: 5px 24px;
+}
+
+.header_maincategory_menu_category div {
+    width: 30%;
+    font-size: 20px;
+    position: absolute;
+    padding-top: 15px;
+}
+
+.header_maincategory_menu_category div span {
+    width: 100%;
+    height: 100%;
+    margin: 5px;
+}
+
+.header_maincategory_menu_category div span a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.header_maincategory_list li:hover {
+    font-weight: bold;
+}
+
+.header_maincategory_list li span:hover {
+    font-weight: bold;
+}
+
+.header_maincategory_list li:hover div {
+    display: flex;
+    flex-direction: column;
+    font-weight: initial;
+}
+
+.header_maincategory_list li div span a:hover {
+    color: rgb(119, 175, 107);
+    padding: 10px;
+}
+
+.header_maincategory_menu_category div {
+    background-color: honeydew;
+    width: calc(100% / 4);
+    display: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 5px rgb(212, 221, 210);
+    text-align: left;
+} */

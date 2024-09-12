@@ -1,0 +1,85 @@
+.UserDelete {
+    width: 50%;
+    margin: auto;
+}
+
+.index_text {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.sub_text {
+    color: #666;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.explain_container {
+    border: 1px solid #666;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.header_text {
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.main_text {
+    font-size: 17px;
+    margin-left: 10px;
+    word-break: keep-all;
+    line-height: 150%;
+}
+
+.userDelete_agree_checkbox {
+    text-align: center;
+    margin: 20px auto;
+}
+
+#userDelete_agree {
+    margin-right: 10px;
+}
+
+.userDelete_button_container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.userDelete_button_container button {
+    width: 30%;
+    margin: 10px auto;
+    line-height: 40px;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+}
+
+.userDelete_submit_button {
+    background-color: rgb(119, 175, 107);
+
+    &:disabled {
+        background-color: #666
+    }
+}
+
+.userDelete_cancel_button {
+    background-color: #666;
+}
+
+/* =========================== */
+.popup_button button {
+    justify-content: center;
+    margin: auto 10px;
+    width: 80px;
+    line-height: 30px;
+    font-size: 15px;
+    background-color: whitesmoke;
+    color: black;
+    border: 1px solid #666;
+    border-radius: 5px;
+}

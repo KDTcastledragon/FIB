@@ -1,0 +1,57 @@
+.productListsTable {
+	width:99%;
+	text-align:center;
+	margin:1px auto;
+	padding:5px;
+}
+
+.productListsTable>* {
+	padding:2px;
+	margin:0;
+	height:20px;
+}
+
+.productListsTable td {
+    overflow: hidden;           /* 내용이 넘치는 경우 숨김 처리 */
+    text-overflow: ellipsis;    /* 생략 부분을 ...으로 표시 */
+}
+
+
+.productInsertTable tr {
+	height:30px;
+} 
+
+.productInsertTable input {
+	display:inline-block;
+	height:29px;
+	font-size:20px;
+} 
+
+.productInsertTable select {
+	display:inline-block;
+	height:29px;
+	font-size:20px;
+} 
+
+.productInsertSubmitButton {
+	margin-left:300px;
+}
+
+
+.productInsertSubmitButton button {
+	display:inline-block;
+	text-align:center;
+	width:300px;
+	height:55px;
+	font-size:40px;
+}
+
+.productInsertGoHome {
+	margin-left:800px;
+	font-size:50px;
+}
+
+
+.productListPageNavigation {
+	font-size:23px;
+}

@@ -1,0 +1,71 @@
+.InsertAddressPopup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow-y: auto;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    /* 팝업을 다른 요소 위에 띄우기 위한 z-index 값 */
+}
+
+.insert_address_popup_content {
+    background-color: whitesmoke;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.insert_address_postcode_container input {
+    width: 700px;
+}
+
+.InsertAddressPopup input {
+    margin-top: 20px;
+    line-height: 30px;
+    font-size: 20px;
+    padding: 0 10px;
+    border: 1px solid #666;
+}
+
+.insert_address_option {
+    font-size: 20px;
+}
+
+.insert_address_option input {
+    width: 250px;
+}
+
+.insert_address_checkbox_container {
+    margin: 20px auto;
+    font-size: 20px;
+    text-align: center;
+}
+
+.insert_address_checkbox {
+    margin-right: 10px;
+}
+
+.insertAddress_btn {
+    width: 120px;
+    height: 40px;
+    margin: 15px auto;
+    margin-right: 50px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: rgb(119, 175, 107);
+    font-size: 20px;
+    color: white;
+
+    &:disabled {
+        background-color: #666
+    }
+}

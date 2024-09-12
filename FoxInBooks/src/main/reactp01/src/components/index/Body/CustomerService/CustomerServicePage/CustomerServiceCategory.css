@@ -1,0 +1,38 @@
+
+.customer_service_category {
+    width: 100%;
+}
+
+.customer_service_category>h2 {
+    text-align: center;
+}
+
+.customer_service_notice-faq-mail {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.customer_service_category .customer_service_notice,
+.customer_service_category .customer_service_faq,
+.customer_service_category .customer_service_mail {
+    width: 250px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 1.2;
+    display: inline-block;
+    margin: 0 atuo;
+}
+
+.btn_notice,
+.btn_faq,
+.btn_mail {
+    margin: 0 15px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.btn_notice:hover,
+.btn_faq:hover,
+.btn_mail:hover{
+    background-color: silver;
+}

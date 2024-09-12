@@ -1,0 +1,200 @@
+.customer_service_faq_list {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+/* FAQ 크기 지정 */
+.customer_service_faq_list_category,
+.faq_list_item {
+    width: 80%;
+}
+
+.customer_service_faq_list_category {
+    padding: 10px 0;
+}
+
+.customer_service_faq_list_category span {
+    display: inline-block;
+    line-height: 40px;
+    margin: 0px 15px;
+}
+
+.customer_service_faq_list_category span:hover {
+    font-weight: bold;
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+/* FAQ 게시판 타이틀 */
+.faq {
+    line-height: 100px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* FAQ category */
+.customer_service_faq_list_category {
+    line-height: 100px;
+    margin: 0 auto;
+}
+
+/* FAQ 항목 */
+.faq_list_item {
+    margin: 0 auto;
+    border-top: 1px solid #efefef;
+}
+
+/* FAQ 각 항목의 제목 */
+.faq_list_item_title {
+    width: 100%;
+    line-height: 70px;
+    margin: 0;
+    padding-left: 15px;
+}
+
+.faq_list_item_title::before {
+    content: 'Q. ';
+    padding-right: 5px;
+}
+
+.faq_list_item_title:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* FAQ 제목 클릭시 클래스명 변경되면서 배경색 생김 */
+.faq_list_item_selected {
+    background-color: #edf2fb;
+}
+
+/* FAQ 각 항목의 내용 */
+.faq_list_item_content {
+    line-height: 50px;
+    background-color: #f9f9fb;
+    margin: 0;
+    padding: 10px;
+    padding-left: 15px;
+    white-space: pre;
+}
+
+.faq_list_item_content::before {
+    content: 'A. ';
+    padding-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.faq_item {
+    width: 80%;
+    border-top: 1px solid #efefef;
+    font-weight: normal;
+    margin: 0 auto;
+    margin-top: 0px;
+    transition: transform 0.3s ease-in-out;
+    /* transition이 있어야 hover시에 애니메이션이 먹힌다.. 왜지... */
+}
+
+.faq_item:hover {
+    /* faq_item을 호버할때 적용되는 css라서
+       faq_open과 속성이 동일해야 이질감 없다. */
+    cursor: pointer;
+    font-weight: bold;
+    transform: scale(1.03);
+}
+
+.faq_open {
+    /* faqOpen == true일때 적용되는 css */
+    background-color: #f7f7f7;
+    font-weight: bold;
+    transform: scale(1.03);
+}
+
+.faq_item:nth-child(n+1) {
+    /* faq_item간의 간격을 위해서 margin-top 부여 */
+    margin-top: 10px;
+}
+
+.faq_q::before {
+    content: "Q.";
+}
+
+.faq_a::before {
+    content: "A.";
+}
+
+.faq_best {
+    margin-bottom: 30px;
+}
+
+/* .faq_input,
+.faq_title div{
+    display: none;
+} */
+
+.faq_title,
+.faq_title div {
+    width: 100%;
+}
+
+
+.faq_list .faq_input:checked+label+div {
+    display: block;
+}
+
+.faq_q,
+.faq_a {
+    line-height: 56px;
+}
+
+.faq_a {
+    font-size: 14px;
+    opacity: 0.8;
+    border-top: 1px solid #e6e6e6;
+}
+
+.faq_list ul {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.faq_title i {
+    margin: 20px;
+    margin-right: 15px;
+}
+
+.faq_list ul {
+    width: 90%;
+    background-color: rgb(241, 237, 232);
+    text-align: left;
+    border-top: 1px dotted;
+}
+
+.faq_title label {
+    cursor: pointer;
+}
+
+
+
+/* 1205 수정 = 삭제하고싶음*/
+/* 중복토글 안되는 조건 css */
+.faq_open .faq_a {
+    display: block;
+}
+
+/* 1205 수정 = 삭제하고싶음*/
+/* 렉걸리지만 토글해제 됨 */
+.faq_a {
+    display: none;
+}

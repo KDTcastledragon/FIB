@@ -1,0 +1,49 @@
+.Payment_server {
+    margin: auto;
+    width: 1240px;
+    height: 600px;
+}
+
+.payment_com {
+    display: grid;
+    grid-template: repeat(4, 1fr) / 1fr 1fr;
+    width: 35%;
+    height: 250px;
+    text-align: center;
+    border: 2px solid lightgrey;
+    border-radius: 5px;
+    transform: translate(85%, 70%);
+}
+
+.payment_com_text {
+    grid-area: 2 / 1 / 3 / 3;
+    font-size: 17px;
+}
+
+.payment_com_home,
+.payment_com_order {
+    grid-row: 3 / 5;
+}
+
+.payment_com a {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    text-decoration: none;
+}
+
+.payment_com_home a {
+    background-color: rgb(119, 175, 107);
+    border-radius: 5px;
+}
+
+.payment_com_home a:hover {
+    background-color:rgb(139, 185, 129);
+}
+
+.payment_com_order a {
+    background-color: rgb(202, 202, 202);
+    border-radius: 5px;
+}

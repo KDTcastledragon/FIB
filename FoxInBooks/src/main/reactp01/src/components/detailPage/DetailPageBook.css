@@ -1,0 +1,233 @@
+.book {
+    margin: auto;
+    justify-content: space-between;
+    width: 80%;
+    height: 630px;
+    margin-bottom: 50px;
+    /* background-color: rgb(221, 255, 255); */
+}
+
+.book_img {
+    /* background-color: rgb(98, 255, 255); */
+    width: 45%;
+}
+
+.book_img_01 {
+    width: 100%;
+    height: 630px;
+    border: 1px solid rgb(209, 209, 209);
+}
+
+.book_info_box {
+    flex-wrap: wrap;
+    /* background-color: rgb(188, 255, 195); */
+    width: 45%;
+    line-height: 60px;
+}
+
+.book_name_box {
+    /* background-color: antiquewhite; */
+    width: 100%;
+    text-align: center;
+}
+
+.book_name {
+    display: block;
+    /* background-color: rgb(248, 201, 140); */
+    font-size: 20px;
+}
+
+.book_author,
+.book_compiler {
+    margin-right: 10px;
+}
+
+.book_author,
+.book_compiler,
+.book_publishingHouse {
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.book_info_box_line {
+    width: 100%;
+}
+
+.book_info_box_line>hr {
+    background-color: rgb(233, 233, 233);
+    height: 1px;
+    border: 0px;
+}
+
+.book_info {
+    /* background-color: beige; */
+    width: 100%;
+    text-align: left;
+    font-size: 15px;
+}
+
+.book_info_01 {
+    /* background-color: rgb(191, 191, 255); */
+    height: 60px;
+}
+
+.book_info_01_L {
+    /* background-color: rgb(169, 176, 209); */
+    width: 30%;
+    height: 60px;
+}
+
+.book_info_01_R {
+    /* background-color: rgb(255, 233, 166); */
+    width: 70%;
+    height: 60px;
+}
+
+.book_info_01_pri {
+    /* background-color: rgb(255, 166, 166); */
+    font-size: 22px;
+}
+
+.book_info_02 {
+    /* background-color: rgb(255, 255, 197); */
+    height: 60px;
+}
+
+.book_info_02_L {
+    /* background-color: rgb(255, 191, 191); */
+    width: 30%;
+    height: 60px;
+}
+
+.book_info_02_R {
+    /* background-color: rgb(134, 171, 255); */
+    width: 70%;
+    height: 60px;
+}
+
+.book_info_03 {
+    /* background-color: rgb(255, 185, 157); */
+    height: 60px;
+}
+
+.book_info_03_L {
+    /* background-color: rgb(255, 191, 191); */
+    width: 30%;
+    height: 60px;
+}
+
+.book_info_03_R {
+    /* background-color: rgb(134, 171, 255); */
+    width: 70%;
+    height: 60px;
+}
+
+.book_info_04 {
+    /* background-color: rgb(251, 220, 255); */
+    height: 60px;
+}
+
+.book_info_04_L {
+    /* background-color: rgb(191, 201, 255); */
+    width: 30%;
+    height: 60px;
+}
+
+.book_info_04_R {
+    /* background-color: rgb(255, 167, 167); */
+    width: 70%;
+    height: 60px;
+}
+
+.book_info_05 {
+    /* background-color: rgb(179, 223, 255); */
+    height: 60px;
+}
+
+.book_info_05_L {
+    /* background-color: rgb(253, 141, 141); */
+    width: 30%;
+    height: 60px;
+}
+
+.book_info_05_R {
+    align-items: center;
+    width: 70%;
+    height: 60px;
+    /* background-color: rgb(167, 248, 255); */
+}
+
+.quantity {
+    margin-right: 10px;
+    width: 80px;
+    height: 30px;
+}
+
+.quantity_sum_box {
+    margin-left: 10px;
+}
+
+.quantity_sum_price {
+    color: rgb(255, 88, 88);
+    font-size: 23px;
+}
+
+.book_info_06 {
+    align-self: end;
+    justify-content: space-between;
+    /* background-color: rgb(210, 210, 210); */
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+.book_info_06_L {
+    /* background-color: rgb(191, 205, 255); */
+    width: 48%;
+    height: 60px;
+}
+
+.book_info_06_R {
+    /* background-color: rgb(255, 167, 167); */
+    width: 48%;
+    height: 60px;
+}
+
+.detailCart {
+    display: inline-block;
+    background-color: rgb(172, 172, 172);
+    width: 100%;
+    height: 60px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
+
+.detailCart:hover {
+    background-color: rgb(196, 196, 196);
+    cursor: pointer;
+}
+
+.buy {
+    display: inline-block;
+    background-color: rgb(255, 88, 88);
+    width: 100%;
+    height: 60px;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.buy:hover {
+    background-color: rgb(255, 120, 120);
+}
+
+.int_author_R div:first-child {
+    margin-bottom: 10px;
+}

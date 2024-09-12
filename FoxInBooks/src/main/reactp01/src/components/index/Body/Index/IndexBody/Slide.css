@@ -1,0 +1,633 @@
+
+
+/* ===================================================================================================== */
+/* ================= 증복 css ========================================================================== */
+/* ===================================================================================================== */
+
+.index_slide_section_label,
+.index_slide_bestseller_label,
+.index_slide_steadyseller_label,
+.index_slide_event_label,
+.index_slide_table01_list,
+.index_slide_table02_list,
+.index_slide_table03_list,
+.index_slide_table01_list_size,
+.index_slide_table02_list_size,
+.index_slide_table03_list_size {
+    display: flex;
+}
+
+.index_slide_table01_list_size,
+.index_slide_table02_list_size,
+.index_slide_table03_list_size {
+    justify-content: space-evenly;
+}
+
+.division_line,
+.index_slide_table01_list_size .item_info_box,
+.index_slide_table02_list_size .item_info_box {
+    text-align: center;
+}
+
+.index_slide_section input[type="radio"],
+.index_slide_bestseller input[type="radio"],
+.index_slide_steadyseller input[type="radio"],
+.index_slide_event input[type="radio"] {
+    display: none;
+}
+
+.index_slide_section_label>label:hover,
+.index_slide_bestseller_label>label:hover,
+.index_slide_steadyseller_label>label:hover,
+.index_slide_event_label>label:hover {
+    cursor: pointer;
+}
+
+.index_slide_section_label,
+.index_slide_bestseller_label,
+.index_slide_steadyseller_label,
+.index_slide_event_label {
+    width: 200px;
+    height: 20px;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+.index_slide_section_label>label,
+.index_slide_bestseller_label>label,
+.index_slide_steadyseller_label>label,
+.index_slide_event_label>label{
+    width: 15px;
+    height: 15px;
+    border: 1px solid rgb(130, 125, 125);
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.index_slide_section_label>label:hover,
+.index_slide_bestseller_label>label:hover,
+.index_slide_steadyseller_label>label:hover,
+.index_slide_event_label>label:hover {
+    background-color: #bbb;
+    opacity: 0.5;
+}
+
+input[id="slide01"]:checked~.index_slide_section_label>label:nth-child(1),
+input[id="slide02"]:checked~.index_slide_section_label>label:nth-child(2), 
+input[id="slide03"]:checked~.index_slide_section_label>label:nth-child(3), 
+input[id="slide04"]:checked~.index_slide_section_label>label:nth-child(4),
+input[id="slide05"]:checked~.index_slide_section_label>label:nth-child(5),
+input[id="bestseller01"]:checked~.index_slide_bestseller_label>label:nth-child(1),
+input[id="bestseller02"]:checked~.index_slide_bestseller_label>label:nth-child(2),
+input[id="bestseller03"]:checked~.index_slide_bestseller_label>label:nth-child(3), 
+input[id="bestseller04"]:checked~.index_slide_bestseller_label>label:nth-child(4),
+input[id="steadyseller01"]:checked~.index_slide_steadyseller_label>label:nth-child(1),
+input[id="steadyseller02"]:checked~.index_slide_steadyseller_label>label:nth-child(2),
+input[id="steadyseller03"]:checked~.index_slide_steadyseller_label>label:nth-child(3),
+input[id="event01"]:checked~.index_slide_event_label>label:nth-child(1),
+input[id="event02"]:checked~.index_slide_event_label>label:nth-child(2),
+input[id="event03"]:checked~.index_slide_event_label>label:nth-child(3) {
+    background-color: #bbb;
+    opacity: 1;
+}
+
+.index_slide_section,
+.index_slide_section01,
+.index_slide_section02 {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.index_slide_content,
+.index_slide_table01,
+.index_slide_table02,
+.index_slide_table03 {
+    transition: all 1s;
+}
+
+.index_slide_table01,
+.index_slide_table02,
+.index_slide_table03,
+.index_slide_table01_list_size,
+.index_slide_table02_list_size,
+.index_slide_table03_list_size {
+    width: 1240px;
+}
+
+
+/* ===================================================================================================== */
+/* ================= 구분 선 =========================================================================== */
+/* ===================================================================================================== */
+
+.division_line {
+    align-items: center;
+    flex-basis: 100%;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.division_line::after,
+.division_line::before {
+    content: "";
+    height: 3px;
+    background-color: silver;
+    flex-grow: 1;
+}
+
+.division_line::after {
+    margin-left: 20px;
+}
+
+.division_line::before {
+    margin-right: 20px;
+}
+
+/* ===================================================================================================== */
+/* ================= main popup ======================================================================== */
+/* ===================================================================================================== */
+
+
+
+/* ===================================================================================================== */
+/* ================= slide section ===================================================================== */
+/* ===================================================================================================== */
+
+.item_info_box_price {
+    text-decoration: line-through;
+    
+}
+
+.item_info_box_discount {
+    color: red;
+    font-size: 12px;
+}
+
+.item_info_box_group,
+.item_info_box_price,
+.item_info_box_discount {
+    margin-bottom: 3px;
+}
+
+
+
+/* ===================================================================================================== */
+/* ================= slide section01 =================================================================== */
+/* ===================================================================================================== */
+
+
+.index_slide_section {
+    width: 1000px;
+    height: 430px;
+    margin: 0 auto;
+}
+
+.index_slide_content {
+    position: relative;
+}
+
+.index_slide_content_list {
+    width: 100%;
+    padding: 0;
+}
+
+.index_slide_content_info>a {
+    display: inline-block;
+}
+
+.index_slide_content_info>a>img {
+    width: 100%;
+    height: 100%;
+}
+
+[id="slide01"]:checked~.index_slide_content {
+    transform: translateX(0%);
+}
+
+[id="slide02"]:checked~.index_slide_content {
+    transform: translateX(-100%);
+    left: -0px;
+}
+
+[id="slide03"]:checked~.index_slide_content {
+    transform: translateX(-200%);
+    left: -6px;
+}
+
+[id="slide04"]:checked~.index_slide_content {
+    transform: translateX(-300%);
+    left: -12px;
+}
+
+[id="slide05"]:checked~.index_slide_content {
+    transform: translateX(-400%);
+    left: -18px;
+}
+
+
+/* ===================================================================================================== */
+/* ================= slide section02 / 03 ============================================================== */
+/* ===================================================================================================== */
+
+.index_slide_section01,
+.index_slide_section02 {
+    height: 450px;
+}
+
+.index_slide_section01 .item_info, 
+.index_slide_section02 .item_info {
+    width: 200px;
+    height: 300px;
+    background-color: rgb(235, 233, 230);
+    margin: 0px 10px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    margin: calc((372px - 300px)/2) 5px;
+    padding: 0 calc((200px - 150px)/2);
+}
+
+.item_info_img>a>img {
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+}
+
+.index_slide_bestseller,
+.index_slide_steadyseller,
+.index_slide_event,
+.index_slide_table03 {
+    margin: calc((450px - 392px)/2) 0;
+}
+
+.index_slide_table01_list,
+.index_slide_table02_list,
+.index_slide_table03_list{
+    width: 400%;
+}
+
+
+.index_slide_table01_list_size .item_info_box,
+.index_slide_table02_list_size .item_info_box {
+    text-align: center;
+}
+
+.item_info_box_name h3{
+    margin-bottom: 5px;
+}
+
+
+[id="bestseller01"]:checked~.index_slide_table01,
+[id="steadyseller01"]:checked~.index_slide_table02,
+[id="event01"]:checked~.index_slide_table03 {
+    transform: translateX(0%);
+}
+
+[id="bestseller02"]:checked~.index_slide_table01,
+[id="steadyseller02"]:checked~.index_slide_table02,
+[id="event02"]:checked~.index_slide_table03 {
+    transform: translateX(-100%);
+}
+
+[id="bestseller03"]:checked~.index_slide_table01,
+[id="steadyseller03"]:checked~.index_slide_table02,
+[id="event03"]:checked~.index_slide_table03 {
+    transform: translateX(-200%);
+}
+
+
+[id="bestseller04"]:checked~.index_slide_table01 {
+    transform: translateX(-300%);
+}
+
+/* ===================================================================================================== */
+/* ================= slide section04 =================================================================== */
+/* ===================================================================================================== */
+
+.index_slide_section03 {
+    height: 500px;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.index_slide_event a img {
+    width: calc(1240px * 0.8);
+    height: 400px;
+}
+
+/* ===================================================================================================== */
+/* ================= top이동, 1:1채팅 아이콘 우측하단 고정 =============================================== */
+/* ===================================================================================================== */
+
+.side_button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 4;
+}
+
+.bi1,
+.bi2 {
+    color: dimgrey;
+}
+
+.bi1 {
+    margin-bottom: 20px;
+}
+
+.bi1:hover,
+.bi2:hover {
+    color: rgb(119, 175, 107);
+}
+
+
+
+
+
+
+
+
+
+/* ****************나머지********************************** */
+/* ===================================================================================================== */
+/* ================= 증복 css ========================================================================== */
+/* ===================================================================================================== */
+
+.index_slide_section_label,
+.index_slide_steadyseller_label,
+.index_slide_event_label,
+.index_slide_table02_list,
+.index_slide_table03_list,
+.index_slide_table02_list_size,
+.index_slide_table03_list_size {
+    display: flex;
+}
+
+.division_line {
+    text-align: center;
+}
+
+
+.index_slide_section input[type="radio"],
+.index_slide_steadyseller input[type="radio"],
+.index_slide_event input[type="radio"] {
+    display: none;
+}
+
+.index_slide_section_label>label:hover,
+.index_slide_steadyseller_label>label:hover,
+.index_slide_event_label>label:hover {
+    cursor: pointer;
+}
+
+.index_slide_section_label,
+.index_slide_steadyseller_label,
+.index_slide_event_label {
+    width: 200px;
+    height: 20px;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+.index_slide_section_label>label,
+.index_slide_steadyseller_label>label,
+.index_slide_event_label>label{
+    width: 15px;
+    height: 15px;
+    border: 1px solid rgb(130, 125, 125);
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.index_slide_section_label>label:hover,
+.index_slide_steadyseller_label>label:hover,
+.index_slide_event_label>label:hover {
+    background-color: #bbb;
+    opacity: 0.5;
+}
+
+input[id="slide01"]:checked~.index_slide_section_label>label:nth-child(1),
+input[id="slide02"]:checked~.index_slide_section_label>label:nth-child(2), 
+input[id="slide03"]:checked~.index_slide_section_label>label:nth-child(3), 
+input[id="slide04"]:checked~.index_slide_section_label>label:nth-child(4),
+input[id="slide05"]:checked~.index_slide_section_label>label:nth-child(5),
+input[id="steadyseller01"]:checked~.index_slide_steadyseller_label>label:nth-child(1),
+input[id="steadyseller02"]:checked~.index_slide_steadyseller_label>label:nth-child(2),
+input[id="steadyseller03"]:checked~.index_slide_steadyseller_label>label:nth-child(3),
+input[id="event01"]:checked~.index_slide_event_label>label:nth-child(1),
+input[id="event02"]:checked~.index_slide_event_label>label:nth-child(2),
+input[id="event03"]:checked~.index_slide_event_label>label:nth-child(3) {
+    background-color: #bbb;
+    opacity: 1;
+}
+
+.index_slide_section,
+.index_slide_section02 {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.index_slide_content,
+.index_slide_table02,
+.index_slide_table03 {
+    transition: all 1s;
+}
+
+
+.index_slide_table02,
+.index_slide_table03,
+.index_slide_table02_list_size,
+.index_slide_table03_list_size {
+    width: 1240px;
+}
+
+
+/* ===================================================================================================== */
+/* ================= 구분 선 =========================================================================== */
+/* ===================================================================================================== */
+
+.division_line {
+    align-items: center;
+    flex-basis: 100%;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.division_line::after,
+.division_line::before {
+    content: "";
+    height: 3px;
+    background-color: silver;
+    flex-grow: 1;
+}
+
+.division_line::after {
+    margin-left: 20px;
+}
+
+.division_line::before {
+    margin-right: 20px;
+}
+
+/* ===================================================================================================== */
+/* ================= main popup ======================================================================== */
+/* ===================================================================================================== */
+
+
+
+/* ===================================================================================================== */
+/* ================= slide section ===================================================================== */
+/* ===================================================================================================== */
+
+
+
+
+/* ===================================================================================================== */
+/* ================= slide section01 =================================================================== */
+/* ===================================================================================================== */
+
+
+.index_slide_section {
+    width: 1000px;
+    height: 430px;
+    margin: 0 auto;
+}
+
+.index_slide_content {
+    position: relative;
+}
+
+.index_slide_content_list {
+    width: 100%;
+    padding: 0;
+}
+
+.index_slide_content_info>a {
+    display: inline-block;
+}
+
+.index_slide_content_info>a>img {
+    width: 100%;
+    height: 100%;
+}
+
+[id="slide01"]:checked~.index_slide_content {
+    transform: translateX(0%);
+}
+
+[id="slide02"]:checked~.index_slide_content {
+    transform: translateX(-100%);
+    left: -0px;
+}
+
+[id="slide03"]:checked~.index_slide_content {
+    transform: translateX(-200%);
+    left: -6px;
+}
+
+[id="slide04"]:checked~.index_slide_content {
+    transform: translateX(-300%);
+    left: -12px;
+}
+
+[id="slide05"]:checked~.index_slide_content {
+    transform: translateX(-400%);
+    left: -18px;
+}
+
+
+/* ===================================================================================================== */
+/* ================= slide section02 / 03 ============================================================== */
+/* ===================================================================================================== */
+
+.index_slide_section02 {
+    height: 450px;
+}
+
+.index_slide_section02 .item_info {
+    width: 200px;
+    height: 300px;
+    background-color: rgb(235, 233, 230);
+    margin: 0px 10px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    margin: calc((372px - 300px)/2) 5px;
+    padding: 0 calc((200px - 150px)/2);
+}
+
+.index_slide_steadyseller,
+.index_slide_event,
+.index_slide_table03 {
+    margin: calc((450px - 392px)/2) 0;
+}
+
+.index_slide_table01_list,
+.index_slide_table02_list,
+.index_slide_table03_list{
+    width: 400%;
+}
+
+
+.index_slide_table01_list_size .item_info_box,
+.index_slide_table02_list_size .item_info_box {
+    text-align: center;
+}
+
+[id="steadyseller01"]:checked~.index_slide_table02,
+[id="event01"]:checked~.index_slide_table03 {
+    transform: translateX(0%);
+}
+
+[id="steadyseller02"]:checked~.index_slide_table02,
+[id="event02"]:checked~.index_slide_table03 {
+    transform: translateX(-100%);
+}
+
+[id="steadyseller03"]:checked~.index_slide_table02,
+[id="event03"]:checked~.index_slide_table03 {
+    transform: translateX(-200%);
+}
+
+[id="bestseller04"]:checked~.index_slide_table01 {
+    transform: translateX(-300%);
+}
+
+/* ===================================================================================================== */
+/* ================= slide section04 =================================================================== */
+/* ===================================================================================================== */
+
+.index_slide_section03 {
+    height: 500px;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.index_slide_event a img {
+    width: calc(1240px * 0.8);
+    height: 400px;
+}
+
+/* ===================================================================================================== */
+/* ================= top이동, 1:1채팅 아이콘 우측하단 고정 =============================================== */
+/* ===================================================================================================== */
+
+.side_button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 4;
+}
+
+.bi1,
+.bi2 {
+    color: dimgrey;
+}
+
+.bi1 {
+    margin-bottom: 20px;
+}
+
+.bi1:hover,
+.bi2:hover {
+    color: rgb(119, 175, 107);
+}

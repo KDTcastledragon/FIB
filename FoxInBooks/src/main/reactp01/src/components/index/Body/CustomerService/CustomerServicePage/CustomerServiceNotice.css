@@ -1,0 +1,94 @@
+/* 공지사항 타이틀 */
+.notice_title {
+    line-height: 100px;
+}
+
+/* 공지사항 전체 컨테이너 */
+.notice_container {
+    width: 1240px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.notice_list,
+.notice_list_search {
+    font-size: 14px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.notice_list:hover,
+.notice_list_search:hover {
+    font-weight: bold;
+    background-color: #CEE3FE;
+}
+
+.notice_list_search_box {
+    list-style: 42px;
+}
+
+.notice_list_search_box input {
+    margin-right: 10px;
+}
+
+.notice_list_search_box input,
+.notice_list_search {
+    height: 25px;
+    margin-top: 6px;
+}
+
+
+/* 목록보기, 검색창 div */
+.notice_list_category {
+    width: 80%;
+    line-height: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 10px;
+
+}
+
+/* 공지사항 테이블 */
+.notice_item {
+    width: 80%;
+    margin: 0 auto;
+    border-top: 1px solid;
+    border-spacing: 0px;
+}
+
+.notice_item thead tr {
+    background-color: #F9F2EC;
+}
+
+/* 공지사항 테이블 항목 */
+.notice_item th {
+    padding: 20px 0;
+}
+
+/* 공지사항 테이블 각 항목의 값 */
+.notice_item td {
+    border-top: 1px solid #efefef;
+    padding: 0;
+}
+
+/* 각 공지사항 행 크기 */
+.notice_item_tr {
+    height: 50px;
+}
+
+/* 각 공지사항 제목 마우스 호버시 */
+.notice_item_title:hover {
+    cursor: pointer;
+    font-weight: bold;
+    transform: scale(1.01);
+}
+
+/* 각 공지사항 내용 */
+.notice_content_detail {
+    text-align: left;
+    white-space: pre;
+    padding-top: 10px;
+}

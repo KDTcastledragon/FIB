@@ -1,0 +1,165 @@
+body {
+    width: 1500px;
+    margin: 0 auto; 
+}
+
+/* (home)관리자페이지 관련 css  */
+.adminList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.adminListHeader {
+	background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    font-weight: bold;
+    margin-bottom: 10px; /* 관리목록 간격 조절 */
+}
+
+.listGroup {
+    padding: 0;
+}
+
+.listGroupItem {
+    list-style: none;
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.listGroupItem:hover {
+    background-color: #f8f9fa;
+}
+
+.listGroupItem.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.container-fluid {
+    width: 100%;
+	margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.adminListArea,
+.resultArea {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding: 10px;
+}
+
+.adminListArea {
+    flex: 0 0 15%;
+    max-width: 15%;
+}
+
+.resultArea {
+    flex: 0 0 85%;
+    max-width: 85%;
+}
+
+.notice_register_search,
+.faq_register_search,
+.inquiry_register_search,
+.coupon_register_search {
+	display : flex;
+	justify-content: space-between;
+}
+
+/* 테이블 크기 관련 ========================================================================== */
+.noticeTable tr,
+.inquiryTable tr {
+	height: 50px;
+}
+
+
+
+/* 관리자페이지 하위 메뉴 */
+.adminDiv {
+	margin-bottom: 20px
+}
+
+.adminSpan {
+	display: flex;
+	justify-content: space-between;
+	width: 95%;
+}
+
+.adminDiv label {
+	display: inline-block;
+	padding: 10px;
+	font-weight: bold;
+	color: #a0a0a0;
+	cursor: pointer;
+}
+
+.adminDiv input[type="radio"] {
+	display: none;
+}
+
+.adminDiv input:checked + label {
+	color: #007bff;
+}
+
+.searchSelect {
+	width: 150px;
+	height: 30px;
+	border-color: lightgrey;
+}
+
+.searchInput {
+	width: 250px;
+	height: 30px;
+	border: 1px solid lightgrey;
+}
+
+.searchBtn {
+	width: 50px;
+	height: 30px;
+	color: white;
+	background-color: #007bff;
+	border: none;
+	cursor: pointer;
+}
+
+.adminDiv div {
+	width: 95%;
+	height: 2px;
+	background-color: #007bff;
+}
+
+/* 관리자페이지 테이블 */
+.adminTable {
+	border-collapse: collapse;
+	width:95%;
+	text-align: center;
+	font-size: 15px;
+	background-color: white;
+}
+
+.adminTable th, td {
+	border: 1px solid lightgrey;
+	height: 40px;
+}
+
+.paymentCancelBtn {
+	width:50%;
+	height: 70%;
+	color:white;
+	background-color: #a0a0a0;
+	border: none;
+	cursor: pointer;
+}
+
+.paymentCancelBtn:hover {
+	background-color: #848484;
+}

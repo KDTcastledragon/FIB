@@ -1,0 +1,60 @@
+.search_result_page {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+.search_result_page>h2 {
+    margin: 40px 0;
+}
+
+.search_result_page hr {
+    margin-bottom: 50px;
+}
+
+.not_found_search {
+    height: 400px;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+.search_result_list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px;
+    list-style: none;
+}
+
+.search_result_item {
+    width: 248px;
+    height: 400px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.search_result_image {
+    width: 180px;
+    height: 250px;
+    margin: 10px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px gray;
+}
+
+.search_result_image:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 15px 5px rgb(143, 143, 143);
+
+}
+
+.search_result_info_box {
+    text-align: center;
+}
+
+.search_result_price{
+    margin: 0;
+}
+
+.search_result_discount {
+    font-size: 10px;
+    color: red;
+}
+

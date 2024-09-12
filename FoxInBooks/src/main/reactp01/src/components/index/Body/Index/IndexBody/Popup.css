@@ -1,0 +1,30 @@
+.popup_item {
+    position: absolute;
+    z-index: 1;
+
+}
+
+.popup_container {
+    background-color: white;
+    width: 180px;
+    height: 340px;
+    border: 1px solid;
+    padding: 10px;
+    text-align: center;
+    margin-left: 200px;
+}
+
+.close_choose {
+    display: flex;
+    justify-content: space-between;
+}
+
+.close_choose .today_close,
+.close_choose .close {
+    font-size: 12px;
+}
+
+.today_close{
+    margin-left: -15px;
+}
+

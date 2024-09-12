@@ -1,0 +1,40 @@
+.re {
+    /* background-color: rgb(252, 255, 216); */
+    margin: 50px auto;
+    width: 80%;
+}
+
+.re_L {
+    /* background-color: rgb(255, 205, 166); */
+    width: 20%;
+    text-align: left;
+}
+
+.re_R {
+    /* background-color: rgb(190, 194, 255); */
+    width: 80%;
+}
+
+.re_table {
+    font-size: 14px;
+    border-collapse: collapse;
+    white-space: pre-line;
+    opacity: 0.4;
+}
+
+.re_table td {
+    border: 1px solid black;
+}
+
+.re_table tr>td:nth-child(1) {
+    border: 1px solid black;
+    color: black;
+    background-color: rgb(232, 232, 232);
+    width: 200px;
+    text-align: center;
+}
+
+.re_table tr>td:nth-child(2) {
+    padding: 0 10px;
+    text-align: left;
+}

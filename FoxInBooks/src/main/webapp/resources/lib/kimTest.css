@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+.listTable {
+ 	margin-bottom: 20px;
+	border-collapse: collapse;
+}
+
+.listTable th {
+	background-color: lightgrey;
+}
+
+.listTable th, td {
+	border: 1px solid; 
+}
+
+.listImage {
+	width: 60px;
+	height: 60px;
+}

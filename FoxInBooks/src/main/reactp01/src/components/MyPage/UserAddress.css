@@ -1,0 +1,79 @@
+.UserAddress {
+    margin-bottom: 200px;
+    width: 80%;
+    margin: auto;
+}
+
+.insert_address_button {
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.refresh_container {
+    align-items: center;
+}
+
+.address_refresh {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+.insert_address_button button {
+    width: 100px;
+    line-height: 40px;
+    background-color: rgb(119, 175, 107);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.user_address_table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 1px solid black;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    margin: 0;
+    padding: 0;
+}
+
+.user_address_index_column {
+    line-height: 50px;
+    border-bottom: 1px solid #bbbaba;
+}
+
+.user_address_basic_tr {
+    background-color: honeydew;
+}
+
+.user_address_column {
+    display: grid;
+    grid-template-columns: 1fr 2fr 7fr 3fr 2fr;
+    text-align: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.basic_address {
+    color: green;
+    font-weight: bold;
+}
+
+.user_address_column button {
+    width: 80%;
+    line-height: 30px;
+    border-radius: 5px;
+}
+
+.full_address {
+    text-align: left;
+    margin-left: 20px;
+}
+
+.basic_address_icon {
+    color: green;
+    width: 30px;
+    height: 30px;
+}

@@ -1,0 +1,93 @@
+.FindId {
+    flex-direction: column;
+    width: 1240px;
+}
+
+/* ------------------------------------------- */
+
+.bi-search {
+    color: rgb(119, 175, 107);
+}
+
+.find_id_main_text {
+    margin: 50px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.find_id_main_text h1 {
+    margin-left: 15px;
+}
+
+/* -------------------------------------- */
+
+.find_id_select_button {
+    text-align: center;
+}
+
+/* -------------------------------------- */
+
+.find_id_form {
+    width: 30%;
+    margin: auto;
+    border: 1px solid #b8c2ba;
+    border-radius: 5px;
+}
+
+.find_id_fieldset {
+    border: 0;
+    font-size: 20px;
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+}
+
+.find_id_input_container {
+    margin-bottom: 20px;
+}
+
+.FindId input {
+    width: 300px;
+    height: 38px;
+    line-height: 38px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 0 5px;
+    margin-left: 5px;
+    margin-top: 10px;
+    border: 1px solid #b8c2ba;
+}
+
+.FindId input:focus {
+    border: 1px solid black;
+}
+
+.find_id_button_container>button {
+    background-color: rgb(119, 175, 107);
+    width: 130px;
+    line-height: 40px;
+    border: 1px solid;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.find_id_submit_btn {
+    margin-right: 30px;
+
+    /* 로그인 버튼 비활성화 */
+    &:disabled {
+        background-color: #666
+    }
+}
+
+.findId_error-message {
+    color: red;
+    font-size: 70%;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 5px;
+}

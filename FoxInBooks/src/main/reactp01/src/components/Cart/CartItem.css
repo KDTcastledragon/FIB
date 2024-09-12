@@ -1,0 +1,150 @@
+.CartItemTbodyContainer {
+  border-bottom: 1px solid gray;
+  height: 100px;
+
+}
+
+/* CartItem [1] CheckBox.================================================================================ */
+.CartItemCheckBoxTd {
+  text-align: center;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+
+
+/* CartItem [2-1] Image.================================================================================ */
+.CartItemInfomationTd {
+  display: flex;
+  border-right: 1px solid gray;
+}
+
+.CartItemImage {
+  margin-left: 8px;
+  margin-top: 8px;
+  width: 60px;
+  height: 90px;
+}
+
+.CartItemImage img {
+  display: inline-block;
+  width: 100%;
+  height: 90%;
+  border: 1px solid rgb(155, 155, 155);
+}
+
+
+/* CartItem [2-2] TitleDomesticProtype.================================================================================ */
+.CartItemTitleDomesticProtype {
+  margin-left: 12px;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.CartItemTitle {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.CartItemDomesticProtype {
+  display: inline-block;
+  text-align: center;
+  background-color: rgb(73, 129, 61);
+  color: white;
+  border-radius: 3px;
+  width: 80px;
+  height: 21px;
+  line-height: 21px;
+  font-size: 11px;
+  margin-right: 10px;
+}
+
+
+/* CartItem [3] Price.================================================================================ */
+.CartItemPriceTd {
+  text-align: center;
+  border-right: 1px solid gray;
+}
+
+.CartItemPriceTd .CartItemPrice {
+  font-size: 18px;
+  color: rgb(255, 88, 88);
+}
+
+.CartItemPriceTd .CartItemPriceUnit {
+  font-size: 12px;
+}
+
+
+/* CartItem [4] Proamount.================================================================================ */
+.CartItemProamountTd {
+  text-align: center;
+  border-right: 1px solid gray;
+}
+
+.CartItemProamountDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.CartItemProamountInput {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 45px;
+  height: 30px;
+  padding: 0;
+  text-align: center;
+}
+
+.CartItemProamountHandleButton {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  /* font-weight: bold; */
+  /* line-height: 30px; */
+}
+
+
+/* CartItem [5] TotalPrice.================================================================================ */
+.CartItemTotalPriceTd {
+  text-align: center;
+  border-right: 1px solid gray;
+}
+
+.CartItemTotalPriceTd .CartItemTotalPrice {
+  font-size: 22px;
+  font-weight: bold;
+  color: rgb(255, 88, 88);
+}
+
+.CartItemTotalPriceUnit {
+  font-size: 13px;
+}
+
+
+/* CartItem [6] Delete.================================================================================ */
+.CartItemDeleteTd {
+  text-align: center;
+  border-right: 1px solid gray;
+}
+
+.CartItemDeleteTd .CartItemDeleteButton {
+  display: inline-block;
+  width: 66px;
+  height: 33px;
+  border: 1px solid red;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  background-color: red;
+
+}
+
+.CartItemDeleteTd .CartItemDeleteButton:hover {
+  background-color: rgb(157, 0, 0);
+  border: 1px solid rgb(157, 0, 0);
+}

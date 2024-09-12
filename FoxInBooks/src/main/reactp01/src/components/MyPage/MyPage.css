@@ -1,0 +1,59 @@
+.MyPage {
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    margin: calc((100vh - 159px - 166px - 200px*2 - 30px - 1px)/2) auto;
+    width: 1240px;
+}
+
+/* ================================= */
+.MyPage_container {
+    margin-bottom: 30px;
+}
+
+.MyPage ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.MyPage ul svg {
+    color: rgb(119, 175, 107);
+}
+
+.MyPage ul li {
+    text-align: center;
+}
+
+.MyPage ul li a {
+    width: 200px;
+    height: 200px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid #666;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.MyPage p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.MyPage a:hover p {
+    color: green;
+}
+
+.MyPage li:hover a {
+    border: 4px solid rgb(119, 175, 107);
+    border-radius: 10px;
+}
+
+.MyPage li:hover a svg {
+    color: green;
+}

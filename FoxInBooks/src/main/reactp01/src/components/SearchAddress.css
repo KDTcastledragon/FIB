@@ -1,0 +1,31 @@
+.SearchAddress {
+    margin-left: 20px;
+}
+
+.SearchAddress input {
+    width: 700px;
+    margin-top: 20px;
+    line-height: 30px;
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+#sample6_postcode {
+    width: 200px;
+}
+
+.search_address_btn_container {
+    text-align: center;
+}
+
+.SearchAddress_btn {
+    width: 120px;
+    height: 40px;
+    margin: 15px auto;
+    margin-right: 50px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: rgb(119, 175, 107);
+    font-size: 20px;
+    color: white;
+}

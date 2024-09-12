@@ -1,0 +1,9 @@
+/* 슬라이드 배너 테스트를 위한 css */
+
+.body {
+    margin: 0 auto;
+}
+
+.d-flex {
+    display: flex;
+}

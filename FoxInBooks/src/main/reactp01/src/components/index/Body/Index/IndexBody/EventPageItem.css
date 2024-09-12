@@ -1,0 +1,70 @@
+.event_list_container {
+    width: 1240px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.event_page_title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.event_page_title_hr {
+    margin: 15px 0;
+}
+
+.event_list_container>ul {
+    list-style: none;
+}
+
+.event_item_list {
+    width: 300px;
+    border: 1px solid;
+    padding: 10px;
+}
+
+.event_item_list:hover {
+    cursor: pointer;
+
+}
+
+.event_view_image {
+    width: 300px;
+    height: 350px;
+}
+
+
+/* 이벤트 상세페이지 ( EventPageItemContent ) */
+
+.event_page_item {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+.event_page_item_image {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* 쿠폰 */
+
+.coupon_box {
+    width: 250px;
+    height: 200px;
+    display: inline-block;
+    margin: 20px;
+}
+
+.popup {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}

@@ -1,0 +1,58 @@
+.KeywordSideBarContainer {
+    border: 1px solid rgb(239, 239, 239);
+    width: 120px;
+    height: 500px;
+    background-color: rgb(246, 246, 246);
+}
+
+.KeywordDomesticStandard,
+.KeywordCategoryStandard,
+.KeywordGenreStandard {
+    background-color: rgb(255, 88, 88);
+    width: 100%;
+    line-height: 30px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    padding: 0;
+}
+
+.KeywordDomesticDiv>button,
+.KeywordCategoryDiv>button,
+.KeywordGenreDiv>button {
+    display: inline-block;
+    width: 100%;
+    height: 34px;
+    line-height: 34px;
+    padding: 0;
+    border: none;
+    text-align: center;
+    background-color: rgb(255, 217, 217);
+    padding: 0;
+}
+
+
+.KeywordCategoryStandard {
+    background-color: rgb(98, 160, 90);
+}
+
+.KeywordCategoryDiv>button {
+    background-color: rgb(195, 233, 190);
+}
+
+.KeywordGenreStandard {
+    background-color: rgb(86, 109, 156);
+}
+
+.KeywordGenreDiv>button {
+    background-color: rgb(197, 208, 228);
+}
+
+.KeywordDomesticDiv>button:hover,
+.KeywordCategoryDiv>button:hover,
+.KeywordGenreDiv>button:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 19px;
+}
