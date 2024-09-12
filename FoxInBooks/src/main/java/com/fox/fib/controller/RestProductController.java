@@ -115,7 +115,7 @@ public class RestProductController {
 
 					List<RecentView> recentviewList = recentviewservice.selectListForUserId(id);
 
-					if (recentviewList.size() >= 5) {
+					if (recentviewList.size() >= 3) {
 						recentviewservice.deleteOldest(id);
 					}
 

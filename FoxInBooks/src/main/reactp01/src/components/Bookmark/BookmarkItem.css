@@ -18,6 +18,8 @@
 
 .bookmarkItemCart {
   margin-bottom: 20px;
+  color: rgb(84, 154, 89);
+  font-weight: bold;
 }
 
 .bookmarkItemImageDiv {
@@ -35,15 +37,18 @@
 }
 
 /* ============ */
-.bookmarkItemCart {
-  color: rgb(84, 154, 89);
-  font-weight: bold;
-}
-
 .bookmarkItemDelete {
   color: rgb(255, 88, 88);
 }
 
+.bookmarkItemCart:hover,
+.bookmarkItemDelete:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+/* ================== */
 .bookmarkItemTitle {
   display: inline-block;
   font-size: 18px;

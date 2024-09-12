@@ -29,6 +29,7 @@ function DetailPageReview({ oneProductWriterJoin }) {
             .then((response) => {
                 const reviewFilter = response.data.filter(item => item.product_code === product_code);
                 setReview(reviewFilter);
+                // alert(`리뷰가져오기 성공`);
             }).catch((err) => {
                 alert(`리뷰 내용을 가져오지 못했습니다. (${err.message})`);
             });

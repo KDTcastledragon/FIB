@@ -105,18 +105,6 @@ const BookmarkItem = (props) => {
   }, [isAllChecked]);
 
   console.log(`isChecked[Item](${props.bookmark_code}) & ${isChecked} ======Item 절취선======Item 절취선======`);
-  // console.log(`selectAllCartList[Item](102) : ` , selectAllCartList);
-
-  {/* <div className='cart_keywords'>
-        <span className='cart_domestic'> {props.domestic == 1 ? '국내도서' :
-          props.domestic == 2 ? '영미도서' :
-            props.domestic == 3 ? '프랑스도서' :
-              props.domestic == 4 ? '독일도서' : '기타도서'}</span>
-        <span className='cart_category'>{props.category == 'novel' ? '소설' :
-          props.category == 'poem' ? '시' :
-            props.category == 'essay' ? '에세이' :
-              props.category == 'magazine' ? '잡지' : '기타'}</span>
-      </div> */}
 
 
   //=====================================================================================================

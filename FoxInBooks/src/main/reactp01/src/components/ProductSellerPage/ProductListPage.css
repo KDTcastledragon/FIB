@@ -1,14 +1,14 @@
 .productListPageContainer {
   margin: 0 auto;
   margin-top: 30px;
-  border: 3px solid red;
+  /* border: 3px solid red; */
   width: 1440px;
   display: flex;
   justify-content: space-around;
 }
 
 .productListPageDisplayContentContainer {
-  border: 5px solid green;
+  /* border: 5px solid green; */
   width: 920px;
   margin: 0 auto;
 }
@@ -137,7 +137,12 @@
   transition: transform 0.9s ease;
 } */
 
-.RecentSideBar {
-  /* margin-top: 20px; */
+/* .RecentSideBar {
   transition: transform 0.9s ease;
+} */
+
+/* ======================================= */
+.ProductListPage_SortOption>.selectedButton {
+  background-color: rgb(92, 152, 75);
+  color: black;
 }

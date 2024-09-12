@@ -42,7 +42,7 @@ function DetailPageReviewCon({ review_code, product_code, id, star_count, regdat
                     </div>
                     <div className="review_con_cover d-flex">
                         <span className="review_con">{content}</span>
-                        <span>
+                        {/* <span>
                             {
                                 image !== '' ?
                                     // <img className="review_con_img" src={`../img/${image}`} />
@@ -50,7 +50,7 @@ function DetailPageReviewCon({ review_code, product_code, id, star_count, regdat
                                     :
                                     ''
                             }
-                        </span>
+                        </span> */}
                     </div>
                 </div>
             </div >

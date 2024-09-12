@@ -164,30 +164,28 @@ const ProductListItem = (props) => {
 
           <div className='productItemWriterTranslatorPublisher'>
             <span className='productItemWriter'>{props.writer}작가명</span>&nbsp;&nbsp;&nbsp;&nbsp;
-
-            <span className='productItemWriterTranslatorPublisherhr'>/</span>&nbsp;&nbsp;&nbsp;&nbsp;
-
-            <span className="productItemTranslator">{props.translator}역식자</span>&nbsp;&nbsp;&nbsp;&nbsp;
+            {props.translator !== null ?
+              <>
+                <span className='productItemWriterTranslatorPublisherhr'>/</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <span className="productItemTranslator">{props.translator}</span>&nbsp;&nbsp;&nbsp;&nbsp;
+              </>
+              : null
+            }
 
             <span className='productItemWriterTranslatorPublisherhr'>|</span>&nbsp;&nbsp;&nbsp;&nbsp;
-
             <span className="productItemPublisher">{props.publisher}</span>&nbsp;&nbsp;&nbsp;&nbsp;
-
             <span className='productItemWriterTranslatorPublisherhr'>/</span>&nbsp;&nbsp;&nbsp;&nbsp;
-
             <span className="productItemPublishDate">{props.publish_date}</span>&nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
 
-            <span className='productItemWriterTranslatorPublisherhr'>|</span>&nbsp;&nbsp;&nbsp;&nbsp;
-
+          <div>
             <span><Star className='productItemStar' />&nbsp;</span>
-
             <span className='productItemGradeAvg'>{props.gradeavg.toFixed(1)}</span>&nbsp;&nbsp;&nbsp;&nbsp;
 
             <span className='productItemForReview'>리뷰 : </span>
             <span className='productItemViewCount'>{props.viewcount} </span>
             <span>건</span>
           </div>
-
 
           <div className="productItemSummary">
             <Link to={`/DetailPage/${props.product_code}`}>{props.summary}</Link>

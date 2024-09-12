@@ -34,7 +34,19 @@ const CartPage = () => {
   useEffect(() => {
     const calculatedTotalPrice = selectedItems.reduce((total, item) => total + item.price * item.proamount, 0);
     setTotalPrice(calculatedTotalPrice);
-  }, [selectedItems, selectedItems.proamount]);
+
+    if (cartData.length > 0 && selectedItems.length > 0 && selectedItems.length === cartData.length) {
+      setIsAllChecked(true);
+    }
+
+    // console.log(`선택된아이템 : `, selectedItems);
+    // console.log(`모두체크 상태 : `, isAllChecked);
+    console.log(`카트크기 : `, cartData.length);
+    console.log(`선택된아이템크기 : `, selectedItems.length);
+
+
+  }, [selectedItems.length, selectedItems.proamount, cartData]);
+
 
   //=========================================================================================================================
 
@@ -74,9 +86,7 @@ const CartPage = () => {
           }
         ];
       } else {
-
         return prevSelectedItems.filter((item) => item.cart_code !== cart_code);
-
       }
     });
 
@@ -98,8 +108,7 @@ const CartPage = () => {
 
   };
 
-  //=========================================================================================================================
-
+  //=====[카트목록 삭제]======================================================================================================
   const handleDeleteSelected = () => {
     const selectedCartCodeArray = selectedItems.map((item) => item.cart_code);
 
@@ -112,7 +121,6 @@ const CartPage = () => {
         console.log('========================================');
         alert(`선택목록 삭제 성공`, response.data);
 
-
         // 삭제 후, 다시 장바구니 목록 가져오기
         axios
           .get(`/cart/cartlistParam?id=${loginID}`)
@@ -124,11 +132,9 @@ const CartPage = () => {
             alert(`서버연결 실패 => ${err.message}`);
           });
 
-
       }).catch((err) => {
         alert(`선택목록 삭제 실패!! ${err.message}`);
       });
-
 
     window.location.reload(); // 새로고침 처리.
 
@@ -136,11 +142,6 @@ const CartPage = () => {
 
 
   //====================================================================================================================
-
-  console.log(`selectedItems[Page] : `, selectedItems);
-  console.log(`totalPrice[Page](147) : `, totalPrice);
-  console.log(`isAllChecked[Page](151) : `, isAllChecked);
-  console.log(`======Page 분단======Page 분단======Page 분단======Page 분단======Page 분단======`);
 
   const firstSelectWarning = () => {
     alert(`구매하실 상품을 먼저 선택해주세요. `);

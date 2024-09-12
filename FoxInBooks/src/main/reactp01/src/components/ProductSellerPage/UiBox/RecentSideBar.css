@@ -1,10 +1,14 @@
 .RecentSideBar {
   border: 1px solid rgb(241, 241, 241);
   width: 240px;
-  height: 520px;
+  height: 380px;
   border-radius: 3px;
   /* background-color: rgb(235, 255, 236); */
   background-color: rgb(249, 249, 249);
+  transition: transform 0.9s ease;
+  /* position: absolute; */
+  /* bottom: 10px; */
+  /* right: 0; */
 
 }
 

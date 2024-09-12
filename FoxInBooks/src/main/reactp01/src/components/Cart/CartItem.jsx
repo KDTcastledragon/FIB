@@ -87,8 +87,6 @@ const CartItem = (props) => {
       !isChecked);
 
     console.log(`개당체크 : `, isChecked);
-
-
   };
 
 
@@ -96,7 +94,7 @@ const CartItem = (props) => {
     setIsChecked(isAllChecked);
   }, [isAllChecked]);
 
-  console.log(`isChecked[Item](${props.cart_code}) & ${isChecked} ======Item 절취선======Item 절취선======`);
+  console.log(`p_code : (${props.cart_code}) ,  itemChecked :  ${isChecked}`);
 
   //=====================================================================================================
   return (

@@ -40,13 +40,12 @@ import UserCoupon from '../../MyPage/UserCoupon';
 
 
 // 성룡
-import BookmarkPage from '../../ProductSellerPage/BookmarkPage';
+import BookmarkPage from '../../Bookmark/BookmarkPage';
 import BestSellerPage from '../../ProductSellerPage/BestSellerPage';
 import OrderListPage from '../../OrderListPage/OrderListPage';
 import CartPage from '../../Cart/CartPage';
 import ItemPage from '../../ProductSellerPage/ItemPage';
 import ProductListPage from '../../ProductSellerPage/ProductListPage';
-
 
 
 function Body() {

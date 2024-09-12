@@ -10,25 +10,25 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import ProductPagination from './ProductPagination';
 const ProductListPage = () => {
-  // =================================================================================================================
-  const [scrollY, setScrollY] = useState(0);
-  // const handleScroll = () => {
-  //   setScrollY(window.scrollY);
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener('scroll', handleScroll);
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, []);
-
-
-  //==========================================================================================================================
   const loginID = sessionStorage.getItem("loginID");
+  const selectedOptSessionStorage = sessionStorage.getItem("selectedOpt");
   const navigator = useNavigate();
   const [productData, setProductData] = useState([]);
   const [bookmarkData, setBookmarkData] = useState([]);
+  const [selectedOpt, setSelectedOpt] = useState(selectedOptSessionStorage);
+
+  // =================================================================================================================
+  const [scrollY, setScrollY] = useState(0);
+  const handleScroll = () => {
+    setScrollY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
 
   //==========================================================================================================================
@@ -54,11 +54,6 @@ const ProductListPage = () => {
 
   }, []);
 
-  //==========================================================================================================================
-  const showWarning = () => {
-    alert("로그인 후 이용가능합니다.");
-  };
-
 
   //===========================================================================================================================
   const [minPrice, setMinPrice] = useState(0);
@@ -78,7 +73,10 @@ const ProductListPage = () => {
     }));
   };
 
+  // ======[옵션 선택]===================================================================================================
   function searchByOption(sortBy) {
+
+
     const data = {
       sortOpt: sortBy,
       ...selectedOptions,
@@ -106,7 +104,7 @@ const ProductListPage = () => {
 
   //============================================================================================================================
   const [page, setPage] = useState(1); // 페이지 수
-  const [size, setSize] = useState(3); // 한 페이지에 보여줄 목록 개수
+  const [size, setSize] = useState(5); // 한 페이지에 보여줄 목록 개수
 
   const indexOfLastItem = page * size;                                      // 현재 페이지에서 보여줄 첫번째 목록 index
   const indexOfFirstItem = indexOfLastItem - size;                          // 현재 페이지에서 보여줄 마지막 목록 index
@@ -132,10 +130,6 @@ const ProductListPage = () => {
   //============================================================================================================================
   return (
     <div className='productListPageContainer'>
-      {/* <div className='KeywordSideBar' style={{ transform: `translateY(${scrollY}px)` }}> */}
-      {/* <KeywordSideBar searchByOption={searchByOption} /> */}
-      {/* </div> */}
-
       <div className='productListPageDisplayContentContainer'>
         <div className='seller_product_page_titlebox'>
           <div className='ProductListPageKeywordCheckBoxWrapper'>
@@ -198,12 +192,65 @@ const ProductListPage = () => {
           </div>
 
           <div className='ProductListPage_SortOption'>
-            <button onClick={() => searchByOption('title')}>제목순</button>
-            <button onClick={() => searchByOption('ascPrice')}>최저가순</button>
-            <button onClick={() => searchByOption('descPrice')}>최고가순</button>
-            <button onClick={() => searchByOption('sellCount')}>판매량순</button>
-            <button onClick={() => searchByOption('gradeAvg')}>평점순</button>
-            <button onClick={() => searchByOption('review')}>리뷰순</button>
+            <button
+              className={selectedOpt === 'title' ? 'selectedButton' : ''}
+              onClick={() => {
+                setSelectedOpt('title');
+                searchByOption('title');
+              }}
+            >
+              제목순
+            </button>
+
+            <button
+              className={selectedOpt === 'ascPrice' ? 'selectedButton' : ''}
+              onClick={() => {
+                setSelectedOpt('ascPrice');
+                searchByOption('ascPrice');
+              }}
+            >
+              최저가순
+            </button>
+
+            <button
+              className={selectedOpt === 'descPrice' ? 'selectedButton' : ''}
+              onClick={() => {
+                setSelectedOpt('descPrice');
+                searchByOption('descPrice');
+              }}
+            >
+              최고가순
+            </button>
+
+            <button
+              className={selectedOpt === 'sellCount' ? 'selectedButton' : ''}
+              onClick={() => {
+                setSelectedOpt('sellCount');
+                searchByOption('sellCount');
+              }}
+            >
+              판매량순
+            </button>
+
+            <button
+              className={selectedOpt === 'gradeAvg' ? 'selectedButton' : ''}
+              onClick={() => {
+                setSelectedOpt('gradeAvg');
+                searchByOption('gradeAvg');
+              }}
+            >
+              평점순
+            </button>
+
+            <button
+              className={selectedOpt === 'review' ? 'selectedButton' : ''}
+              onClick={() => {
+                setSelectedOpt('review');
+                searchByOption('review');
+              }}
+            >
+              리뷰순
+            </button>
 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
