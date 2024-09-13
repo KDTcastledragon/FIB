@@ -117,7 +117,6 @@ function OrderListPage() {
             </div>
           </td>
           <td className='orderDetailPriceProamountTd'>
-            {/* <span className='orderDetailPriceUnit'>&#8361;</span> */}
             <span className='orderDetailPrice'>&#8361;</span>&nbsp;
             <span className='orderDetailPrice'>{d.price ? d.price.toLocaleString() : 0}</span>
 

@@ -45,20 +45,24 @@ const BookmarkPage = () => {
       </div>
 
 
-      <div className="BookmarkPageGridCover">
-        {bookmarkData.map((d, i) => (
-          <BookmarkItem
-            key={i}
-            bookmark_code={d.bookmark_code}
-            id={loginID}
-            product_code={d.product_code}
-            protype={d.protype}
-            domestic={d.domestic}
-            title={d.title}
-            image={d.image}
-            price={d.price}
-          />
-        ))}
+      <div className={bookmarkData.length === 0 ? 'noContentInBookMark' : 'BookmarkPageGridCover'}>
+        {bookmarkData.length === 0 ?
+          <span>찜목록 상품이 없습니다.</span>
+          :
+          bookmarkData.map((d, i) => (
+            <BookmarkItem
+              key={i}
+              bookmark_code={d.bookmark_code}
+              id={loginID}
+              product_code={d.product_code}
+              protype={d.protype}
+              domestic={d.domestic}
+              title={d.title}
+              image={d.image}
+              price={d.price}
+            />
+          ))
+        }
       </div>
 
 
@@ -69,7 +73,7 @@ const BookmarkPage = () => {
 
           <Link to='/'><button className='CartPageToHome'>계속 쇼핑하기</button></Link>
 
-          <div className='CartPageToPayment'>
+          <div className='CartPageToPaymentFromBookmark'>
             <Link to={`/CartPage`}>장바구니바로가기</Link>
           </div>
         </div>

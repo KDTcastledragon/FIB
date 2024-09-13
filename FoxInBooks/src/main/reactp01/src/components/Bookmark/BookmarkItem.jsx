@@ -1,15 +1,15 @@
-import { Link } from 'react-router-dom';
 import './BookmarkItem.css';
-import { useState, useEffect } from 'react';
+
 import axios from 'axios';
+import { Link, useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 const BookmarkItem = (props) => {
   //===============================================================================================================
   const { isAllChecked } = props;
-
   const [isChecked, setIsChecked] = useState(0);
-
   const loginID = sessionStorage.getItem("loginID");
+  const navi = useNavigate();
 
   function saveOnCart() {
     const savedDataOnCart = {
@@ -28,10 +28,10 @@ const BookmarkItem = (props) => {
     axios
       .post(`/cart/cartOnSaveAction`, savedDataOnCart)
       .then((response) => {
-        console.log(`장바구니 담았어요 :`, response);
-        console.log(`response.OK :`, response.status);
-        console.log('========================================');
-        alert(`장바구니 담았어요 : ${response.data}`);
+        // console.log(`장바구니 담았어요 :`, response);
+        // console.log(`response.OK :`, response.status);
+        // console.log('========================================');
+        alert(`${response.data}`);
 
       }).catch((err) => {
         alert(`담기 실패!! ${err.message}`);
@@ -40,9 +40,9 @@ const BookmarkItem = (props) => {
     axios
       .post(`/bookmark/bookmarkDeleteThisAction`, DeleteThisProductData)
       .then((response) => {
-        console.log(`장바구니 담기  : `, response.data);
-        console.log('========================================');
-        alert(`나의 찜목록에서 자동으로 삭제해요. `, response.data);
+        // console.log(`장바구니 담기  : `, response.data);
+        // console.log('========================================');
+        // alert(`나의 찜목록에서 자동으로 삭제해요. `, response.data);
 
       }).catch((err) => {
         alert(`카트목록 삭제 실패!! ${err.message}`);
@@ -55,7 +55,6 @@ const BookmarkItem = (props) => {
   //===============================================================================================================
 
   function DeleteThisProduct() {
-
     const DeleteThisProductData = {
       product_code: props.product_code,
       bookmark_code: props.bookmark_code
@@ -77,41 +76,16 @@ const BookmarkItem = (props) => {
 
   };
 
-
-  //=====================================================================================================
-
-  // 부모 컴포넌트로 선택된 상태와 함께 cart_code 전달
-  const handleCheckboxChange = () => {
-    setIsChecked(!isChecked);
-
-    props.onSelectItem(
-      props.bookmark_code,
-      props.product_code,
-      props.protype,
-      props.domestic,
-      props.title,
-      props.image,
-      props.price,
-      !isChecked);
-
-    console.log(`개당체크 : `, isChecked);
-
-
-  };
-
-
-  useEffect(() => {
-    setIsChecked(isAllChecked);
-  }, [isAllChecked]);
-
-  console.log(`isChecked[Item](${props.bookmark_code}) & ${isChecked} ======Item 절취선======Item 절취선======`);
+  function linkToProduct(code) {
+    navi(`/DetailPage/${code}`);
+  }
 
 
   //=====================================================================================================
   return (
     <div className="bookmarkGridItemTopLevelContainer">
       <div className='bookmarkItemImageCartDeleteDiv'>
-        <div className='bookmarkItemImageDiv'>
+        <div className='bookmarkItemImageDiv' onClick={() => linkToProduct(props.product_code)}>
           <img src={`../img/${props.image}`} alt="" className='bookmarkItemImage' />
         </div>
         <div className='bookmarkItemCartDeleteDiv'>
