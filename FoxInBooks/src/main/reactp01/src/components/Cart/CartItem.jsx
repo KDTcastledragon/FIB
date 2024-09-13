@@ -7,7 +7,7 @@ const CartItem = (props) => {
   //===============================================================================================================
   const { proamount, setProamount, isAllChecked } = props;
 
-  const [isChecked, setIsChecked] = useState(0);
+  const [isChecked, setIsChecked] = useState(props.handleChecked);
 
   // 수량 더하기
   function addProamount() {
@@ -91,10 +91,10 @@ const CartItem = (props) => {
 
 
   useEffect(() => {
-    setIsChecked(isAllChecked);
-  }, [isAllChecked]);
+    setIsChecked(props.handleChecked);
+  }, [props.handleChecked]);
 
-  console.log(`p_code : (${props.cart_code}) ,  itemChecked :  ${isChecked}`);
+  console.log(`p_code : ${props.cart_code} ,  itemChecked :  ${isChecked} , props.handleChecked : ${props.handleChecked}`);
 
   //=====================================================================================================
   return (
@@ -145,7 +145,6 @@ const CartItem = (props) => {
 
       <td className='CartItemDeleteTd'>
         <button type='button' onClick={DeleteThisProduct} className='CartItemDeleteButton' >삭제</button>
-        {/* <span>{props.cart_code}</span> */}
       </td>
     </tr>
   );

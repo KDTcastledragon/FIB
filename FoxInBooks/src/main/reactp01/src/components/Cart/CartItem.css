@@ -147,4 +147,5 @@
 .CartItemDeleteTd .CartItemDeleteButton:hover {
   background-color: rgb(157, 0, 0);
   border: 1px solid rgb(157, 0, 0);
+  cursor: pointer;
 }

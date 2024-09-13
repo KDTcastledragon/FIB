@@ -21,10 +21,13 @@
 				<label for="all">전체</label>
 				
 				<input type="radio" name="selectMenu" id="order" ${requestScope.orderParam eq 'order' ? 'checked' : ''} onclick="memberPaymentList('order')" />
-				<label for="order">주문내역</label>
+				<label for="order">기본 주문내역</label>
 				
-				<input type="radio" name="selectMenu" id="cancel" ${requestScope.orderParam eq 'cancel' ? 'checked' : ''} onclick="memberPaymentList('cancel')" />
-				<label for="cancel">취소요청</label>
+				<input type="radio" name="selectMenu" id="cancelRequest" ${requestScope.orderParam eq 'cancelRequest' ? 'checked' : ''} onclick="memberPaymentList('cancelRequest')" />
+				<label for="cancelRequest">취소 요청</label>
+				
+				<input type="radio" name="selectMenu" id="canceled" ${requestScope.orderParam eq 'canceled' ? 'checked' : ''} onclick="memberPaymentList('canceled')" />
+				<label for="canceled">취소 완료</label>
 			</sapn>
 			
 			<span>
@@ -73,13 +76,19 @@
 							<c:if test="${memberPaymentVar.payment_cancel == 1}">
 								<button type="button"
 										class="paymentCancelBtn" 
+										style="width:90px;"
 										onclick="paymentCancel('${requestScope.orderParam}',
 										'${String(memberPaymentVar.member_payment_code)}',
 										'${memberPaymentVar.id}',
 										${memberPaymentVar.product_amount},
 										${memberPaymentVar.origin_price},
 										${memberPaymentVar.coupon_code})">
-										취소
+										주문 취소
+								</button>
+							</c:if>
+							<c:if test="${memberPaymentVar.payment_cancel == 2}">
+								<button type="button"disabled="true">
+										취소 완료
 								</button>
 							</c:if>
 						</td>

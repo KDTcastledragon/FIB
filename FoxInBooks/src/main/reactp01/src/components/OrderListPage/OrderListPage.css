@@ -274,10 +274,11 @@
 
 .orderDetailItemDeleteButton_:hover {
     background-color: rgb(125, 19, 19);
+    cursor: pointer;
 }
 
 .orderDetailItemDeleteButton_canceledOrder {
-    width: 110px;
+    width: 120px;
     height: 37px;
     background-color: rgb(152, 152, 152);
     border: none;

@@ -155,11 +155,6 @@ function PaymentPage() {
         const payment_formData = new FormData(document.getElementById('paymentPage_form'));
         payment_formData.append('paymentDetailData', JSON.stringify(location.state.order_data));
 
-        // new FormData 의 value 값 확인하는 방법
-        // for (const value of payment_formData.values()) {
-        //     console.log(value);
-        // }
-
         if (document.getElementById('order_addr_recipient').value === '' ||
             document.getElementById('order_addr_address_zip').value === '' ||
             document.getElementById('order_addr_address').value === '' ||
@@ -215,7 +210,7 @@ function PaymentPage() {
                 {/* 주문상품 가짓수 */}
                 <input type="hidden" name="product_amount" value={location.state.order_data.length} />
                 {/* 배송상태 */}
-                <input type="hidden" name="delivery_state" value="상품 준비 중" />
+                <input type="hidden" name="delivery_state" value="결제 완료" />
                 {/* 배송예정일 */}
                 <input type="hidden" name="arrive_date" value={arrive_date} />
 
@@ -273,7 +268,9 @@ function PaymentPage() {
                         &nbsp;&nbsp;&nbsp;
                         <span className="order_addr_ip_box">
                             <label>
-                                <input type="radio" name="order_addr_select" id="addr_userData" onClick={addrUserData} />&nbsp;회원정보와 동일
+                                <input type="radio" name="order_addr_select" id="addr_userData" onClick={addrUserData}
+                                />&nbsp;회원정보와 동일
+
                             </label>
                             &nbsp;&nbsp;&nbsp;
                             <DeliveryAddressModal loginID={loginID} setAddressSelected={setAddressSelected} />

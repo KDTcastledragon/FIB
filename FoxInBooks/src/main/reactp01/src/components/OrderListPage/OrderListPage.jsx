@@ -18,8 +18,6 @@ function OrderListPage() {
   const [toMonth, setToMonth] = useState('');
   const [toDay, setToDay] = useState('');
 
-  // const [fromDate, setFromDate] = useState('');
-  // const [toDate, setToDate] = useState('');
 
   useEffect(() => {
     axios
@@ -46,18 +44,30 @@ function OrderListPage() {
         alert(`서치데이터를 실패햇넹 : `, error.messege);
       })
   };
+
+
   //==========================================================================================================================
   const cancelOrder = (member_payment_code) => {
-    axios
-      .get(`/mpdetail/cancelOrder?paycode=${member_payment_code}&id=${loginID}`)
-      .then((response) => {
-        console.log(response.data);
-        alert(`주문취소요청이 완료되었습니다.`);
-      }).catch((e) => {
-        console.log(e.messege);
-      })
+    const isConfirmed = window.confirm("정말로 주문을 취소하시겠습니까?");
 
-    window.location.reload();
+    const data = {
+      id: loginID,
+      paycode: member_payment_code
+    }
+
+    if (isConfirmed) {
+      axios
+        .post(`/mpdetail/cancelOrder`, data)
+        .then((response) => {
+          console.log(response.data);
+          alert(`주문취소요청이 전송되었습니다.`);
+          window.location.reload();
+        }).catch((e) => {
+          console.log(e.messege);
+          alert(`주문취소요청 오류`);
+        })
+    }
+
   };
   //==========================================================================================================================
   const groupedData = {};
@@ -73,7 +83,7 @@ function OrderListPage() {
 
   Object.values(groupedData).forEach((group) => {
     group.forEach((d, rowIndex) => {
-      const isCancelled = d.payment_cancel === 1;
+      // const isCancelled = d.payment_cancel === 1;
 
       rows.push(
         <tr key={rowIndex} className='orderDetailItem'>
@@ -140,23 +150,46 @@ function OrderListPage() {
           {rowIndex == 0 && (
             <>
               <td className='orderDetailItemStateTd' rowSpan={group.length}>
-                <span className='orderDetailItemState'>상품 준비중</span>
+                <span className='orderDetailItemState'>{d.delivery_state}</span>
               </td>
             </>
           )}
 
           {rowIndex == 0 && (
             <td className='orderDetailItemDeleteTd' rowSpan={group.length}>
-              <button
-                className={`orderDetailItemDeleteButton_${isCancelled ? 'canceledOrder' : ''}`}
-                onClick={() => isCancelled ? null : cancelOrder(d.member_payment_code)}
-                disabled={isCancelled}
-              >
-                주문 취소 {isCancelled && '완료'}
-              </button>
+              {d.payment_cancel === 0 ?
+                <button
+                  className={`orderDetailItemDeleteButton_`}
+                  onClick={() => cancelOrder(d.member_payment_code)}
+                >
+                  주문 취소
+                </button>
+
+                : d.payment_cancel === 1 ?
+                  <button
+                    className={`orderDetailItemDeleteButton_waiting`}
+                    onClick={() => alert(`현재 주문 취소 요청중입니다.`)}
+                    disabled={d.payment_cancel === 1}
+                  >
+                    주문 취소 요청중
+                  </button>
+
+                  : d.payment_cancel === 2 ?
+                    <button
+                      className={`orderDetailItemDeleteButton_canceledOrder`}
+                      onClick={() => alert(`이미 취소된 주문입니다.`)}
+                      disabled={d.payment_cancel === 2}
+                    >
+                      주문 취소 완료
+                    </button>
+
+                    : <span>error</span>
+              }
+
             </td>
-          )}
-        </tr>
+          )
+          }
+        </tr >
       );
     });
   });

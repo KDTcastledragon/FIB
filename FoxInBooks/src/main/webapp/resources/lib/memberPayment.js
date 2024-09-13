@@ -18,7 +18,8 @@ function paymentCancel(orderParam, member_payment_code, id, product_amount, orig
 
 	if (confirm('주문내역을 취소하시겠습니까?')) {
 
-		axios.post(`memberPayment/memberPaymentCancel`,
+		axios
+		.post(`memberPayment/memberPaymentCancel`,
 			{
 				orderParam: orderParam,
 				member_payment_code: member_payment_code,

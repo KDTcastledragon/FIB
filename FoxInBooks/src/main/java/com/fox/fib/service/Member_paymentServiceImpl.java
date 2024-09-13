@@ -42,12 +42,19 @@ public class Member_paymentServiceImpl implements Member_paymentService {
 		return entity.getMember_payment_code();
 	}
 
-	// 주문정보 삭제
+	// 주문정보 삭제요청옴
 	@Override
 	public int updateOne(Long member_payment_code) {
 		return repository.updateOne(member_payment_code);
 	}
-	
+
+	// 주문정보 완전 삭제 처리
+	@Override
+	public int convertCancel(Long member_payment_code) {
+		return repository.convertCancel(member_payment_code);
+	}
+
+
 	// 주문정보 삭제( 인스턴스 삭제 )
 	@Override
 	public void deleteById(Long member_payment_code) {

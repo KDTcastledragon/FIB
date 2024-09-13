@@ -49,19 +49,36 @@ public class Member_paymentController {
 
 		if (orderParam.equals("all")) {
 			orderList.addAll(member_paymentService.selectList());
-		} else if (orderParam.equals("order")) {
+		}
+
+		else if (orderParam.equals("order")) {
 			for (int i = 0; i < member_paymentService.selectList().size(); i++) {
 				if (member_paymentService.selectList().get(i).getPayment_cancel() == 0) {
 					orderList.add(member_paymentService.selectList().get(i));
 				}
 			}
-		} else {
+		}
+
+		else if (orderParam.equals("cancelRequest")) {
 			for (int i = 0; i < member_paymentService.selectList().size(); i++) {
 				if (member_paymentService.selectList().get(i).getPayment_cancel() == 1) {
 					orderList.add(member_paymentService.selectList().get(i));
 				}
 			}
 		}
+
+		else if (orderParam.equals("canceled")) {
+			for (int i = 0; i < member_paymentService.selectList().size(); i++) {
+				if (member_paymentService.selectList().get(i).getPayment_cancel() == 2) {
+					orderList.add(member_paymentService.selectList().get(i));
+				}
+			}
+		}
+
+		else {
+			log.info("error");
+		}
+
 		model.addAttribute("memberPaymentData", orderList);
 		model.addAttribute("orderParam", orderParam);
 	}
@@ -94,23 +111,27 @@ public class Member_paymentController {
 		int pointUpdate = (int) (userOne.getPoint() - ((dto.getOrigin_price()) * 0.05));
 		userOne.setPoint(pointUpdate);
 		userService.register(userOne);
-		
+
 		// 회원포인트 증가( 사용한 포인트 반환 )
 		userOne = userService.selectOne(dto.getId());
 		int usedPoint = member_paymentService.selectOne(Long.parseLong(dto.getMember_payment_code())).getDiscount_point();
-		pointUpdate = (int) (userOne.getPoint() + usedPoint);
+		pointUpdate = userOne.getPoint() + usedPoint;
 		userOne.setPoint(pointUpdate);
 		userService.register(userOne);
-		
+
+		// payment_cancel
+
 		// 사용한 쿠폰 반환
 		userCouponDto.setCoupon_code(dto.getCoupon_code());
 		userCouponDto.setId(dto.getId());
 		User_coupon userCouponOne = userCouonService.selectOne(userCouponDto);
-		userCouponOne.setUse_check(false);
-		
+//		userCouponOne.setUse_check(false);
+
 		// 취소
-		member_paymentService.deleteById(Long.parseLong(dto.getMember_payment_code()));
-		member_payment_detailService.deleteList(Long.parseLong(dto.getMember_payment_code()));
+		member_paymentService.convertCancel(Long.parseLong(dto.getMember_payment_code()));
+		member_payment_detailService.updatePaymentCancel(Long.parseLong(dto.getMember_payment_code()));
+//		member_paymentService.deleteById(Long.parseLong(dto.getMember_payment_code()));
+//		member_payment_detailService.deleteList(Long.parseLong(dto.getMember_payment_code()));
 
 		try {
 			return ResponseEntity.ok("주문내역이 취소되었습니다.");

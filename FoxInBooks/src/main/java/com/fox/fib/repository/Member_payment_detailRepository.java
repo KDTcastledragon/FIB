@@ -41,17 +41,22 @@ public interface Member_payment_detailRepository extends JpaRepository<Member_pa
 	// 주문상세 삭제( 인스턴스 삭제 )
 	@Transactional
 	@Modifying
-	@Query(nativeQuery = true, value="delete from member_payment_detail where member_payment_code = :member_payment_code")
+	@Query(nativeQuery = true, value = "delete from member_payment_detail where member_payment_code = :member_payment_code")
 	void deleteList(@Param("member_payment_code") Long member_payment_code);
-	
+
 	// 리뷰 등록 시 상품 구매 확인
 	@Query("select m from Member_payment_detail m where m.id = :id and m.product_code = :product_code")
-	Optional<Member_payment_detail> selectOne(@Param("id") String id, @Param("product_code") int product_code); 
+	Optional<Member_payment_detail> selectOne(@Param("id") String id, @Param("product_code") int product_code);
 
 	// ============caslte dragon===========================================
 	@Transactional
 	@Modifying
-	@Query(nativeQuery = true, value = "update member_payment_detail set payment_cancel = 1 where member_payment_code = :paycode")
+	@Query(nativeQuery = true, value = "update member_payment_detail set payment_cancel = 2 where member_payment_code = :paycode")
 	int updatePaymentCancel(@Param("paycode") Long payment_code);
+
+	@Transactional
+	@Modifying
+	@Query(nativeQuery = true, value = "update member_payment_detail set payment_cancel = 1 where member_payment_code = :paycode")
+	int updatePaymentCancelWating(@Param("paycode") Long payment_code);
 
 }

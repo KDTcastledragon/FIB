@@ -1,17 +1,17 @@
 import './CartPage.css';
 import { useState, useEffect } from 'react';
 import CartItem from './CartItem';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import CartCautionBox from './CartCautionBox';
 import CartAdvertise from './CartAdvertise';
 import axios from 'axios';
 
 const CartPage = () => {
-  //====================================================================================================
+  const navigator = useNavigate();
   const [cartData, setCartData] = useState([]);
   const [selectedItems, setSelectedItems] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
-  const [isAllChecked, setIsAllChecked] = useState(0);
+  const [allChoose, setAllChoose] = useState(false);
 
   const loginID = sessionStorage.getItem("loginID");
 
@@ -35,9 +35,9 @@ const CartPage = () => {
     const calculatedTotalPrice = selectedItems.reduce((total, item) => total + item.price * item.proamount, 0);
     setTotalPrice(calculatedTotalPrice);
 
-    if (cartData.length > 0 && selectedItems.length > 0 && selectedItems.length === cartData.length) {
-      setIsAllChecked(true);
-    }
+    // if (cartData.length > 0 && selectedItems.length > 0 && selectedItems.length === cartData.length) {
+    //   setIsAllChecked(true);
+    // }
 
     // console.log(`선택된아이템 : `, selectedItems);
     // console.log(`모두체크 상태 : `, isAllChecked);
@@ -94,17 +94,18 @@ const CartPage = () => {
   //=========================================================================================================================
 
   const handleAllSelectCartLists = (e) => {
-    setIsAllChecked(e);
+    console.log(`▶▶▶▶▶▶▶▶▶▶▶▶ e : `, e);
 
-    if (e == 1) {
+    if (e === true) {
       setSelectedItems(cartData);
+      setAllChoose(true);
     }
 
     else {
       setSelectedItems([]);
+      setAllChoose(false);
     }
 
-    console.log(`e : `, e);
 
   };
 
@@ -142,9 +143,17 @@ const CartPage = () => {
 
 
   //====================================================================================================================
+  function purchase(data) {
+    if (cartData.length === 0) {
+      alert(`장바구니에 상품이 없습니다.`);
 
-  const firstSelectWarning = () => {
-    alert(`구매하실 상품을 먼저 선택해주세요. `);
+    } else if (data === 0) {
+      alert(`구매하실 상품을 먼저 선택해주세요. `);
+
+    } else if (data >= 1) {
+      navigator('/PaymentPage', { state: { order_data: selectedItems } });
+
+    }
   }
 
 
@@ -163,7 +172,8 @@ const CartPage = () => {
         <thead>
           <tr>
             <th style={{ width: '6%' }} >
-              <input type='checkbox' style={{ width: '26px', height: '26px' }} checked={isAllChecked}
+              <input type='checkbox' style={{ width: '26px', height: '26px' }}
+                checked={selectedItems.length === cartData.length ? true : false}
                 onChange={(e) => { handleAllSelectCartLists(e.target.checked) }} />
             </th>
             <th style={{ width: '35%' }}>상품정보</th>
@@ -177,7 +187,7 @@ const CartPage = () => {
         <tbody>
           {cartData.length === 0 ?
             <tr className='cartDataIsVacant'>
-              <td colSpan='4'>장바구니에 담은 상품이 없습니다.</td>
+              <td colSpan='6'><div><span>장바구니에 담은 상품이 없습니다.</span></div></td>
             </tr>
             :
             cartData.map((d, i) => (
@@ -195,7 +205,7 @@ const CartPage = () => {
                 onSelectItem={handleSelectItem}
                 onDeleteSelected={handleDeleteSelected}
                 onSelectAllItems={handleAllSelectCartLists}
-                isAllChecked={isAllChecked}
+                handleChecked={allChoose}
                 setProamount={(newProamount) => handleUpdateProamount(d.cart_code, newProamount)}
               />
             ))}
@@ -246,19 +256,10 @@ const CartPage = () => {
 
         <div className='CartPageMoveToOtherPageButton'>
 
-          <Link to='/'><button className='CartPageToHome'>계속 쇼핑하기</button></Link>
+          <button className='CartPageToHome' onClick={() => navigator('/')}>계속 쇼핑하기</button>
 
-          <div className='CartPageToPayment'>{selectedItems.length > 0 ? (<Link to={`/PaymentPage`}
-            state={{ order_data: selectedItems }}>
-            바로구매
-          </Link>)
-            :
-            (<Link to={`/CartPage`}
-              state={{ order_data: selectedItems }}
-              onClick={firstSelectWarning}>
-              바로구매
-            </Link>)}
-
+          <div className='CartPageToPayment'>
+            <button onClick={() => purchase(selectedItems.length)}>바로구매</button>
           </div>
         </div>
 

@@ -18,10 +18,12 @@ public interface Member_paymentService {
 
 	// 주문정보 삭제
 	int updateOne(Long member_payment_code);
-	
+
 	// 주문정보 삭제( 인스턴스 삭제 )
 	void deleteById(Long member_payment_code);
 
 	// 관리자 페이지용 양세현=========================================================================
 	List<OrderSummaryDTO> getDailyOrderSummary(String startDate, String endDate);
+
+	int convertCancel(Long member_payment_code);
 }

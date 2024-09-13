@@ -5,12 +5,10 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import com.fox.fib.controller.Member_payment_detailController;
 import com.fox.fib.entity.Member_payment_detail;
 import com.fox.fib.repository.Member_payment_detailRepository;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.log4j.Log4j2;
 
 @Service
 @RequiredArgsConstructor
@@ -55,7 +53,12 @@ public class Member_payment_detailServiceImpl implements Member_payment_detailSe
 	public int updatePaymentCancel(Long payment_code) {
 		return repository.updatePaymentCancel(payment_code);
 	}
-	
+
+	@Override
+	public int updatePaymentCancelWating(Long payment_code) {
+		return repository.updatePaymentCancelWating(payment_code);
+	}
+
 	// 주문상세 취소( 인스턴스 삭제 )
 	@Override
 	public void deleteList(Long member_payment_code) {
