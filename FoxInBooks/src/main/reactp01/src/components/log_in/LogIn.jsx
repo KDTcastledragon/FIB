@@ -115,13 +115,14 @@ function LogIn() {
                     <img src="img/fox_logo.png" alt="findUserInfo_logo" className="find_userInfo_logo" />
                 </Link>
                 <span><h1>로그인</h1></span>
-                <span> - tjdfyd123!</span>
             </div>
             <form className='log_in_form'>
                 <fieldset className="log_in_field d-flex">
                     <div>
+                        <div>tjdfyd123!</div>
                         <div>
                             <div>
+
                                 <input id='id' className='log_in_id' name='id' required
                                     value={id} placeholder='ID(이메일)'
                                     onKeyUp={changeButton}
@@ -135,7 +136,9 @@ function LogIn() {
                             <div>
                                 <input id='password' name='password' type={showPassword ? 'text' : 'password'}
                                     minLength={7} autoComplete='off' required autoCapitalize='off' className='log_in_pw'
-                                    placeholder='Password' value={password} onKeyUp={changeButton}
+                                    placeholder='Password'
+                                    value={password}
+                                    onKeyUp={changeButton}
                                     onKeyDown={handleEnterKey}
                                     onChange={(e) => {
                                         setPassword(e.target.value);
