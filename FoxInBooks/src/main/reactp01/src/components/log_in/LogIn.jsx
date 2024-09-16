@@ -160,6 +160,7 @@ function LogIn() {
                                 <label htmlFor='log_in_checkbox_password'>비밀번호 표시</label>
                             </span>
                         </div>
+
                         <div>
                             <button id='log_in_button' type="button" disabled={button} onClick={logInButton}>로그인
                             </button>
