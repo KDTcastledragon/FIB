@@ -314,7 +314,7 @@ function JoinMembership() {
         navigate('/LogIn');
     }
 
-    // ** 아이디 중복 체크
+    // ** 아이디 중복 체크==========================================================
     const idDupCheck = (e) => {
         e.preventDefault();
 
@@ -338,6 +338,8 @@ function JoinMembership() {
         }
     }
 
+
+    //=========================================================
     function submitButton() {
         const selectedYear = yearRef.current.value;
         const selectedMonth = monthRef.current.value;
