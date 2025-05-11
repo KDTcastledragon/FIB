@@ -8,10 +8,10 @@ import { ReactComponent as Star } from '../detailPage/review_star.svg';
 const ProductListItem = (props) => {
   const loginID = sessionStorage.getItem("loginID");
   const navigator = useNavigate();
-  console.log(`p_code : ${props.product_code} , props.isMarked : ${props.isMarked}`);
   const [isMarked, setIsMarked] = useState(props.isMarked);
-  console.log(`p_code : ${props.product_code} , isMarked : ${isMarked}`);
-  console.log(``);
+  // console.log(`p_code : ${props.product_code} , props.isMarked : ${props.isMarked}`);
+  // console.log(`p_code : ${props.product_code} , isMarked : ${isMarked}`);
+  // console.log(``);
   const [proamount, setProamount] = useState(1);
 
   useEffect(() => {
